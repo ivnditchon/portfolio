@@ -22,8 +22,9 @@
     <meta name="twitter:image:alt" content="Ivan Ditchon image" />
     <meta name="twitter:site" content="@ivnditchon" />
     <link rel="stylesheet" href="./css/style.css" />
-    <link rel="stylesheet" href="../node_modules/@glidejs/glide/dist/css/glide.core.min.css">
-    <script type="module" defer src="./js/app.js"></script>
+
+    <link rel="stylesheet" href="https://unpkg.com/swiper@8/swiper-bundle.min.css" />
+
     <link rel="apple-touch-icon" href="./icon.ico" type="ico" />
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -117,7 +118,7 @@
                 <div class="flex flex-col justify-center items-center mt-24">
                     <div class="relative">
                         <div class="absolute -left-3 -top-3 h-28 w-28 ring-8 rounded-sm ring-primary"></div>
-                        <img src="./images/my_image.jpg" alt="" class="h-28 object-contain rounded-sm relative z-50" />
+                        <img src="./images/my_image.jpg" alt="" class="h-28 object-contain rounded-lg relative z-50" />
                     </div>
                     <p class="px-2 mt-10 text-xs text-justify text-secondary antialiased xs:text-sm md:text-base xl:mt-10">
                         Hi, my name is Ivan Ditchon. As of now, I am still keep practing just to develop and enhance my skills on front end development and UX/UI design. I've created some projects so that, I could apply all the knowledge that I have and could land a job as a
@@ -279,7 +280,61 @@
                     <h1 class="text-xl text-secondary uppercase antialiased tracking-widest">featured project</h1>
                     <div class="w-full h-1 bg-primary rounded-lg"></div>
                 </div>
-                <!-- Slider -->
+
+                <!-- Slider main container -->
+                <div class="swiper w-full h-max mt-16">
+                    <!-- Additional required wrapper -->
+                    <div class="swiper-wrapper">
+                        <!-- Slides -->
+                        <div class="swiper-slide">
+                            <img src="./images/project_images/backburnshop-image.png" alt="Backburn shop " class="w-full" />
+                            <div class="flex flex-col items-center mt-3 md:mt-6">
+                                <p class="text-base font-semibold antialiased tracking-wide text-gray-900 md:text-xl xl:text-2xl">Backburn Shop</p>
+                                <a href="https://backburnclone.netlify.app" class="text-sm text-gray-900 mt-2 underline md:text-base md:mt-4 xl:text-xl">https://backburnclone.netlify.app</a>
+                            </div>
+                            </li>
+                        </div>
+                        <div class="swiper-slide">
+                            <img src="./images/project_images/ninjavan-image.png" alt="Ninjavan " class="xl:w-2/3" />
+                            <div class="flex flex-col items-center mt-3 md:mt-6">
+                                <p class="text-base font-semibold antialiased tracking-wide text-gray-900 md:text-xl xl:text-2xl">Ninjavan</p>
+                                <a href="https://ninjavan-clone.netlify.app" class="text-sm text-gray-900 mt-2 underline md:text-base md:mt-4 xl:text-xl">https://ninjavan-clone.netlify.app</a>
+                            </div>
+                        </div>
+                        <div class="swiper-slide">
+                            <img src="./images/project_images/invitation-image.png" alt="Wedding Invitation" class="xl:w-2/3" />
+                            <div class="flex flex-col items-center mt-3 md:mt-6">
+                                <p class="text-base font-semibold antialiased tracking-wide text-gray-900 md:text-xl xl:text-2xl">Wedding Invitation</p>
+                                <a href="https://norhamlally.netlify.app" class="text-sm text-gray-900 mt-2 underline md:text-base md:mt-4 xl:text-xl">https://norhamlally.netlify.app</a>
+                            </div>
+                        </div>
+                        <div class="swiper-slide">
+                            <img src="./images/project_images/t&l-image.png" alt="Torres & Lauban Law" />
+                            <div class="flex flex-col items-center mt-3 md:mt-6">
+                                <p class="text-base font-semibold antialiased tracking-wide text-gray-900 md:text-xl xl:text-2xl">Torres & Lauban Law</p>
+                                <a href="https://torresandlaubanlaw.netlify.app" class="text-sm text-gray-900 mt-2 underline md:text-base md:mt-4 xl:text-xl">https://torresandlaubanlaw.netlify.app</a>
+                            </div>
+                        </div>
+                        <div class="swiper-slide">
+                            <img src="./images/project_images/todolist-image.png" alt="Todo List" />
+                            <div class="flex flex-col items-center mt-3 md:mt-6">
+                                <p class="text-base font-semibold antialiased tracking-wide text-gray-900 md:text-xl xl:text-2xl">Todo List</p>
+                                <a href="https://ivn-todolist.netlify.app" class="text-sm text-gray-900 mt-2 underline md:text-base md:mt-4 xl:text-xl">https://ivn-todolist.netlify.app</a>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- If we need pagination -->
+                    <div class="swiper-pagination"></div>
+
+                    <!-- If we need navigation buttons -->
+                    <div class="swiper-button-prev"></div>
+                    <div class="swiper-button-next"></div>
+                </div>
+
+
+
+
+                <!-- Slider 
                 <div class="glide relative mt-16">
                     <div class="glide__track" data-glide-el="track">
                         <ul class="glide__slides">
@@ -319,8 +374,8 @@
                                 </div>
                             </li>
                         </ul>
-                    </div>
-                    <!-- Arrows -->
+                    </div> 
+                    <!-- Arrows 
                     <div class="glide__arrows " data-glide-el="controls ">
                         <button class="glide__arrow glide__arrow--left absolute left-0 top-1/2 transform -translate-y-1/2 z-50 xl:left-56 group" data-glide-dir="<">
                             <svg xmlns="http://www.w3.org/2000/svg " class="h-6 w-6 md:h-7 md:w-7 xl:h-10 xl:w-10 text-gray-500 group-hover:text-gray-800 transition duration-500" fill="none" viewBox="0 0 24 24 " stroke="currentColor ">
@@ -333,7 +388,7 @@
                             </svg>
                         </button>
                     </div>
-                </div>
+                </div> -->
             </div>
             <!-- Download -->
             <div id="download" role="region" class="w-full h-max flex flex-col justify-center items-center relative pt-20 pb-10 bg-white">
@@ -380,30 +435,27 @@
                 </div>
             </div>
         </div>
-    </div>
-    <!-- Footer container -->
-    <div class="w-full h-max flex flex-col justify-center items-start relative bottom-0 py-5 px-5 bg-secondary opacity-95">
-        <div class="w-full h-max flex justify-start items-start gap-x-3">
-            <a href="#">
-                <img src="./images/social_media/github.svg" alt="Github" class="h-6 object-contain" />
-            </a>
-            <a href="#">
-                <img src="./images/social_media/linkedin.svg" alt="Linkedin" class="h-6 object-contain" />
-            </a>
-            <a href="#">
-                <img src="./images/social_media/twitter.svg" alt="Twitter" class="h-6 object-contain" />
-            </a>
-            <a href="#">
-                <img src="./images/social_media/facebook.svg" alt="facebook" class="h-6 object-contain" />
-            </a>
+        <!-- Footer container -->
+        <div class="w-full h-max flex flex-col justify-center items-start relative bottom-0 py-5 px-5 bg-secondary opacity-95">
+            <div class="w-full h-max flex justify-start items-start gap-x-3">
+                <a href="#">
+                    <img src="./images/social_media/github.svg" alt="Github" class="h-6 object-contain" />
+                </a>
+                <a href="#">
+                    <img src="./images/social_media/linkedin.svg" alt="Linkedin" class="h-6 object-contain" />
+                </a>
+                <a href="#">
+                    <img src="./images/social_media/twitter.svg" alt="Twitter" class="h-6 object-contain" />
+                </a>
+                <a href="#">
+                    <img src="./images/social_media/facebook.svg" alt="facebook" class="h-6 object-contain" />
+                </a>
+            </div>
+            <p class="text-xs text-gray-200 mt-5">ivanditchon-porfolio 2.0 &copy; 2022</p>
         </div>
-        <p class="text-xs text-gray-200 mt-5">ivanditchon-porfolio 2.0 &copy; 2022</p>
-    </div>
     </div>
 
-    <!-- Glider -->
-    <script src="https://cdn.jsdelivr.net/npm/@glidejs/glide"></script>
-    <script>
-        new Glide('.glide').mount()
-    </script>
+    <script src="./js/swiper.js" type="module"></script>
 </body>
+
+</html>
