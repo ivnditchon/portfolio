@@ -85,9 +85,9 @@
                 </button>
             </div>
             <!-- Main text -->
-            <div class="w-full h-max absolute top-32 px-5 z-50 flex flex-col items-start landscape:static landscape:w-2/3">
-                <h1 class="text-4xl text-gray-900 font-bold tracking-wide">Hi, I am <strong class="text-primary">Ivan</strong></h1>
-                <p class="py-2 text-xs text-gray-900">A self-taught front end developer who love's to code and create personal projects</p>
+            <div class="w-full h-max absolute top-32 px-5 z-50 flex flex-col items-start landscape:static landscape:w-2/3 xs:top-44">
+                <h1 class="text-4xl text-gray-900 font-bold tracking-wide xs:text-5xl">Hi, I am <strong class="text-primary">Ivan</strong></h1>
+                <p class="py-2 text-xs text-gray-900 xs:text-sm">A self-taught front end developer who love's to code and create personal projects</p>
                 <div class="mt-3 flex justify-center md:mt-8">
                     <button class="px-3 py-2.5 mt-3 text-sm text-gray-200 font-semibold bg-primary outline-none uppercase antialiased tracking-widest rounded-sm">
                         Featured project
@@ -97,14 +97,14 @@
             <!-- Button swipe -->
             <div class="absolute left-1/2 bottom-2 transform -translate-x-1/2 z-40">
                 <button class="animate-bounce">
-                    <svg xmlns="http://www.w3.org/2000/svg" class="h-7 w-7 text-gray-500" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                    <svg xmlns="http://www.w3.org/2000/svg" class="h-7 w-7 text-gray-500 xs:h-8 xs:w-8" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                         <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7" />
                     </svg>
                 </button>
             </div>
             <!-- Hero -->
-            <div class="absolute bottom-10 right-0 landscape:static">
-                <img src="./images/hero.png" alt="Hero" class="h-52 object-contain landscape:h-44">
+            <div class="absolute bottom-16 right-0 landscape:static">
+                <img src="./images/hero.png" alt="Hero" class="h-52 object-contain landscape:h-44 xs:h-72">
             </div>
         </div>
         <!-- Sections container -->
@@ -112,15 +112,15 @@
             <!-- About section -->
             <div id="about" role="region" class="w-full h-max flex flex-col justify-center items-center relative py-20 bg-white">
                 <div class="flex flex-col items-center justify-center">
-                    <h1 class="text-2xl text-secondary uppercase antialiased tracking-widest">about</h1>
+                    <h1 class="text-2xl text-secondary uppercase antialiased tracking-widest xs:text-3xl">about</h1>
                     <div class="w-full h-1 bg-primary rounded-lg"></div>
                 </div>
                 <div class="flex flex-col justify-center items-center mt-24">
                     <div class="relative">
-                        <div class="absolute -left-3 -top-3 h-28 w-28 ring-8 rounded-sm ring-primary"></div>
-                        <img src="./images/my_image.jpg" alt="" class="h-28 object-contain rounded-lg relative z-50" />
+                        <div class="absolute -left-3 -top-3 h-28 w-28 ring-8 rounded-sm ring-primary xs:h-32 xs:w-32"></div>
+                        <img src="./images/my_image.jpg" alt="" class="h-28 object-contain rounded-lg relative z-50 xs:h-32" />
                     </div>
-                    <p class="px-2 mt-10 text-xs text-justify text-secondary antialiased xs:text-sm md:text-base xl:mt-10">
+                    <p class="px-2 mt-10 text-xs text-justify text-secondary antialiased xs:text-sm">
                         Hi, my name is Ivan Ditchon. As of now, I am still keep practing just to develop and enhance my skills on front end development and UX/UI design. I've created some projects so that, I could apply all the knowledge that I have and could land a job as a
                         front end developer. In my downtime, I enjoying reading manga and about web API's.
                     </p>
@@ -129,19 +129,19 @@
             <!-- Skills section -->
             <div id="skills" role="region" class="w-full h-max flex flex-col justify-center items-center relative pt-20 pb-10 bg-white">
                 <div class="flex flex-col items-center justify-center">
-                    <h1 class="text-2xl text-secondary uppercase antialiased tracking-widest">software skills</h1>
+                    <h1 class="text-2xl text-secondary uppercase antialiased tracking-widest xs:text-3xl">software skills</h1>
                     <div class="w-full h-1 bg-primary rounded-lg"></div>
                 </div>
                 <div class="flex flex-col items-center justify-center gap-y-4 w-full h-max mt-16 max-w-sm">
                     <!-- HTML -->
                     <div class="flex flex-col items-center justify-center w-full h-max px-3 py-5 shadow-lg rounded-md border border-gray-200">
                         <div>
-                            <img src="./images/html.svg" alt="HTML" class="h-16 object-contain">
+                            <img src="./images/html.svg" alt="HTML" class="h-16 object-contain xs:h-20">
                         </div>
                         <div class="w-full h-max flex flex-col items-center justify-center mt-5">
                             <div class="w-full h-max flex justify-between items-center">
-                                <h1 class="text-sm font-medium text-secondary font-primary tracking-wide uppercase antialiased">html</h1>
-                                <h2 class="text-sm text-secondary font-primary ml-2 antialiased">90%</h2>
+                                <h1 class="text-sm font-medium text-secondary font-primary tracking-wide uppercase antialiased xs:text-base">html</h1>
+                                <h2 class="text-sm text-secondary font-primary ml-2 antialiased xs:text-base">90%</h2>
                             </div>
                             <div class="w-full h-3 border bg-gray-200 rounded-full mt-2">
                                 <div class="w-0 h-full bg-primary flex items-center rounded-full"></div>
@@ -151,12 +151,12 @@
                     <!-- CSS -->
                     <div class="flex flex-col items-center justify-center w-full h-max px-3 py-5 shadow-lg rounded-md border border-gray-200">
                         <div>
-                            <img src="./images/css.svg" alt="HTML" class="h-16 object-contain">
+                            <img src="./images/css.svg" alt="HTML" class="h-16 object-contain xs:h-20">
                         </div>
                         <div class="w-full h-max flex flex-col items-center justify-center mt-5">
                             <div class="w-full h-max flex justify-between items-center">
-                                <h1 class="text-sm font-medium text-secondary font-primary tracking-wide uppercase antialiased">css</h1>
-                                <h2 class="text-sm text-secondary font-primary ml-2 antialiased">80%</h2>
+                                <h1 class="text-sm font-medium text-secondary font-primary tracking-wide uppercase antialiased xs:text-base">css</h1>
+                                <h2 class="text-sm text-secondary font-primary ml-2 antialiased xs:text-base">80%</h2>
                             </div>
                             <div class="w-full h-3 border bg-gray-200 rounded-full mt-2">
                                 <div class="w-0 h-full bg-primary flex items-center rounded-full"></div>
@@ -166,12 +166,12 @@
                     <!-- Javascript -->
                     <div class="flex flex-col items-center justify-center w-full h-max px-3 py-5 shadow-lg rounded-md border border-gray-200">
                         <div>
-                            <img src="./images/javascript.svg" alt="HTML" class="h-16 object-contain">
+                            <img src="./images/javascript.svg" alt="HTML" class="h-16 object-contain xs:h-20">
                         </div>
                         <div class="w-full h-max flex flex-col items-center justify-center mt-5">
                             <div class="w-full h-max flex justify-between items-center">
-                                <h1 class="text-sm font-medium text-secondary font-primary tracking-wide uppercase antialiased">javascript</h1>
-                                <h2 class="text-sm text-secondary font-primary ml-2 antialiased">60%</h2>
+                                <h1 class="text-sm font-medium text-secondary font-primary tracking-wide uppercase antialiased xs:text-base">javascript</h1>
+                                <h2 class="text-sm text-secondary font-primary ml-2 antialiased xs:text-base">60%</h2>
                             </div>
                             <div class="w-full h-3 border bg-gray-200 rounded-full mt-2">
                                 <div class="w-0 h-full bg-primary flex items-center rounded-full"></div>
@@ -181,12 +181,12 @@
                     <!-- React container -->
                     <div class="flex flex-col items-center justify-center w-full h-max px-3 py-5 shadow-lg rounded-md border border-gray-200">
                         <div>
-                            <img src="./images/react.svg" alt="HTML" class="h-16 object-contain">
+                            <img src="./images/react.svg" alt="HTML" class="h-16 object-contain xs:h-20">
                         </div>
                         <div class="w-full h-max flex flex-col items-center justify-center mt-5">
                             <div class="w-full h-max flex justify-between items-center">
-                                <h1 class="text-sm font-medium text-secondary font-primary tracking-wide uppercase antialiased">react</h1>
-                                <h2 class="text-sm text-secondary font-primary ml-2 antialiased">20%</h2>
+                                <h1 class="text-sm font-medium text-secondary font-primary tracking-wide uppercase antialiasedxs:text-base">react</h1>
+                                <h2 class="text-sm text-secondary font-primary ml-2 antialiased xs:text-base">20%</h2>
                             </div>
                             <div class="w-full h-3 border bg-gray-200 rounded-full mt-2">
                                 <div class="w-0 h-full bg-primary flex items-center rounded-full"></div>
@@ -196,12 +196,12 @@
                     <!-- Figma container -->
                     <div class="flex flex-col items-center justify-center w-full h-max px-3 py-5 shadow-lg rounded-md border border-gray-200">
                         <div>
-                            <img src="./images/figma.svg" alt="HTML" class="h-16 object-contain">
+                            <img src="./images/figma.svg" alt="HTML" class="h-16 object-contain xs:h-20">
                         </div>
                         <div class="w-full h-max flex flex-col items-center justify-center mt-5">
                             <div class="w-full h-max flex justify-between items-center">
-                                <h1 class="text-sm font-medium text-secondary font-primary tracking-wide uppercase antialiased">figma</h1>
-                                <h2 class="text-sm text-secondary font-primary ml-2 antialiased">30%</h2>
+                                <h1 class="text-sm font-medium text-secondary font-primary tracking-wide uppercase antialiased xs:text-base">figma</h1>
+                                <h2 class="text-sm text-secondary font-primary ml-2 antialiased xs:text-base">30%</h2>
                             </div>
                             <div class="w-full h-3 border bg-gray-200 rounded-full mt-2">
                                 <div class="w-0 h-full bg-primary flex items-center rounded-full"></div>
@@ -211,12 +211,12 @@
                     <!-- Adobe xd section -->
                     <div class="flex flex-col items-center justify-center w-full h-max px-3 py-5 shadow-lg rounded-md border border-gray-200">
                         <div>
-                            <img src="./images/adobexd.svg" alt="HTML" class="h-16 object-contain">
+                            <img src="./images/adobexd.svg" alt="HTML" class="h-16 object-contain xs:h-20">
                         </div>
                         <div class="w-full h-max flex flex-col items-center justify-center mt-5">
                             <div class="w-full h-max flex justify-between items-center">
-                                <h1 class="text-sm font-medium text-secondary font-primary tracking-wide uppercase antialiased">adobe xd</h1>
-                                <h2 class="text-sm text-secondary font-primary ml-2 antialiased">30%</h2>
+                                <h1 class="text-sm font-medium text-secondary font-primary tracking-wide uppercase antialiased xs:text-base">adobe xd</h1>
+                                <h2 class="text-sm text-secondary font-primary ml-2 antialiased xs:text-base">30%</h2>
                             </div>
                             <div class="w-full h-3 border bg-gray-200 rounded-full mt-2">
                                 <div class="w-0 h-full bg-primary flex items-center rounded-full"></div>
@@ -228,7 +228,7 @@
             <!-- Experience section -->
             <div id="experience" role="region" class="w-full h-max flex flex-col justify-center items-center relative pt-20 pb-10 bg-white">
                 <div class="flex flex-col items-center justify-center">
-                    <h1 class="text-xl text-secondary uppercase antialiased tracking-widest">experience</h1>
+                    <h1 class="text-xl text-secondary uppercase antialiased tracking-widest xs:text-2xl">experience</h1>
                     <div class="w-full h-1 bg-primary rounded-lg"></div>
                 </div>
                 <div class="flex justify-center items-center w-full h-max mt-16 relative">
@@ -236,7 +236,7 @@
                     <!-- Experience 1 -->
                     <div class="w-1/2 h-max absolute top-0 left-0 px-2 py-2 shadow-lg rounded-md border border-gray-200">
                         <div class="flex flex-col">
-                            <h2 class="text-secondary antialiased text-sm font-medium md:text-lg">IT Staff</h2>
+                            <h2 class="text-secondary antialiased text-sm font-medium md:text-lg xs:text-base">IT Staff</h2>
                             <p class="py-0.5 text-secondary text-sm overflow-auto whitespace-nowrap capitalize antialiased">precious cabana ynna beach resort</p>
                             <p class="py-0.5 text-secondary text-sm overflow-auto whitespace-nowrap antialiased"><i>Dec. 12, 2018 - Dec 31, 2021</i></p>
                         </div>
@@ -249,7 +249,7 @@
                     <!-- Experience 2 -->
                     <div class="w-1/2 h-max absolute top-1/2 transform -translate-y-1/2 right-0 px-2 py-2 shadow-lg border border-gray-200 rounded-md">
                         <div class="flex flex-col">
-                            <h2 class="text-secondary antialiased text-sm font-medium md:text-lg">Payroll Clerk</h2>
+                            <h2 class="text-secondary antialiased text-sm font-medium md:text-lg xs:text-base">Payroll Clerk</h2>
                             <p class="py-0.5 text-secondary text-sm overflow-auto whitespace-nowrap capitalize antialiased">precious cabana ynna beach resort</p>
                             <p class="py-0.5 text-secondary text-sm overflow-auto whitespace-nowrap antialiased"><i>Jan. 7, 2020 - Dec 31, 2021</i></p>
                         </div>
@@ -262,7 +262,7 @@
                     <!-- Experience 3 -->
                     <div class="w-1/2 h-max absolute bottom-0 left-0 px-2 py-2 shadow-lg border border-gray-200 rounded-md">
                         <div class="relative z-50">
-                            <h2 class="text-secondary antialiased text-sm font-medium md:text-lg">Sales</h2>
+                            <h2 class="text-secondary antialiased text-sm font-medium md:text-lg xs:text-base">Sales</h2>
                             <p class="py-0.5 text-secondary text-sm overflow-auto whitespace-nowrap capitalize antialiased">precious cabana ynna beach resort</p>
                             <p class="py-0.5 text-secondary text-sm overflow-auto whitespace-nowrap antialiased"><i>Jan. 7, 2020 - Dec 31, 2021</i></p>
                         </div>
@@ -277,7 +277,7 @@
             <!-- Projects container -->
             <div id="project" role="region" class="w-full h-max flex flex-col justify-center items-center relative pt-20 pb-10 bg-white">
                 <div class="flex flex-col items-center justify-center">
-                    <h1 class="text-xl text-secondary uppercase antialiased tracking-widest">featured project</h1>
+                    <h1 class="text-xl text-secondary uppercase antialiased tracking-widest xs:text-2xl">featured project</h1>
                     <div class="w-full h-1 bg-primary rounded-lg"></div>
                 </div>
 
@@ -289,37 +289,37 @@
                         <div class="swiper-slide">
                             <img src="./images/project_images/backburnshop-image.png" alt="Backburn shop " class="w-full" />
                             <div class="flex flex-col items-center mt-3 md:mt-6">
-                                <p class="text-base font-semibold antialiased tracking-wide text-gray-900 md:text-xl xl:text-2xl">Backburn Shop</p>
-                                <a href="https://backburnclone.netlify.app" class="text-sm text-gray-900 py-3 underline md:text-base md:mt-4 xl:text-xl">https://backburnclone.netlify.app</a>
+                                <p class="text-base font-semibold antialiased tracking-wide text-gray-900 xs:text-xl">Backburn Shop</p>
+                                <a href="https://backburnclone.netlify.app" class="text-sm text-gray-900 py-3 underline xs:text-lg">https://backburnclone.netlify.app</a>
                             </div>
                             </li>
                         </div>
                         <div class="swiper-slide">
                             <img src="./images/project_images/ninjavan-image.png" alt="Ninjavan " class="xl:w-2/3" />
                             <div class="flex flex-col items-center mt-3 md:mt-6">
-                                <p class="text-base font-semibold antialiased tracking-wide text-gray-900 md:text-xl xl:text-2xl">Ninjavan</p>
-                                <a href="https://ninjavan-clone.netlify.app" class="text-sm text-gray-900 py-3 underline md:text-base md:mt-4 xl:text-xl">https://ninjavan-clone.netlify.app</a>
+                                <p class="text-base font-semibold antialiased tracking-wide text-gray-900 xs:text-xl">Ninjavan</p>
+                                <a href="https://ninjavan-clone.netlify.app" class="text-sm text-gray-900 py-3 underline xs:text-lg">https://ninjavan-clone.netlify.app</a>
                             </div>
                         </div>
                         <div class="swiper-slide">
                             <img src="./images/project_images/invitation-image.png" alt="Wedding Invitation" class="xl:w-2/3" />
                             <div class="flex flex-col items-center mt-3 md:mt-6">
-                                <p class="text-base font-semibold antialiased tracking-wide text-gray-900 md:text-xl xl:text-2xl">Wedding Invitation</p>
-                                <a href="https://norhamlally.netlify.app" class="text-sm text-gray-900 py-3 underline md:text-base md:mt-4 xl:text-xl">https://norhamlally.netlify.app</a>
+                                <p class="text-base font-semibold antialiased tracking-wide text-gray-900 xs:text-xl">Wedding Invitation</p>
+                                <a href="https://norhamlally.netlify.app" class="text-sm text-gray-900 py-3 underline xs:text-lg">https://norhamlally.netlify.app</a>
                             </div>
                         </div>
                         <div class="swiper-slide">
                             <img src="./images/project_images/t&l-image.png" alt="Torres & Lauban Law" />
                             <div class="flex flex-col items-center mt-3 md:mt-6">
-                                <p class="text-base font-semibold antialiased tracking-wide text-gray-900 md:text-xl xl:text-2xl">Torres & Lauban Law</p>
-                                <a href="https://torresandlaubanlaw.netlify.app" class="text-sm text-gray-900 py-3 underline md:text-base md:mt-4 xl:text-xl">https://torresandlaubanlaw.netlify.app</a>
+                                <p class="text-base font-semibold antialiased tracking-wide text-gray-900 xs:text-xl">Torres & Lauban Law</p>
+                                <a href="https://torresandlaubanlaw.netlify.app" class="text-sm text-gray-900 py-3 underline xs:text-lg">https://torresandlaubanlaw.netlify.app</a>
                             </div>
                         </div>
                         <div class="swiper-slide">
                             <img src="./images/project_images/todolist-image.png" alt="Todo List" />
                             <div class="flex flex-col items-center mt-3 md:mt-6">
-                                <p class="text-base font-semibold antialiased tracking-wide text-gray-900 md:text-xl xl:text-2xl">Todo List</p>
-                                <a href="https://ivn-todolist.netlify.app" class="text-sm text-gray-900 py-3 underline md:text-base md:mt-4 xl:text-xl">https://ivn-todolist.netlify.app</a>
+                                <p class="text-base font-semibold antialiased tracking-wide text-gray-900 xs:text-xl">Todo List</p>
+                                <a href="https://ivn-todolist.netlify.app" class="text-sm text-gray-900 py-3 underline xs:text-lg">https://ivn-todolist.netlify.app</a>
                             </div>
                         </div>
                     </div>
@@ -334,7 +334,7 @@
             <!-- Download -->
             <div id="download" role="region" class="w-full h-max flex flex-col justify-center items-center relative pt-20 pb-10 bg-white">
                 <div class="flex flex-col items-center justify-center">
-                    <h1 class="text-xl text-secondary uppercase antialiased tracking-widest">hire me!</h1>
+                    <h1 class="text-xl text-secondary uppercase antialiased tracking-widest xs:text-2xl">hire me!</h1>
                     <div class="w-full h-1 bg-primary rounded-lg"></div>
                 </div>
                 <div class="w-full h-max flex flex-col items-center justify-center py-5 mt-16 border border-gray-200 rounded-md shadow-lg max-w-sm">
@@ -348,7 +348,7 @@
             <!-- Contact container -->
             <div id="contact" role="region" class="w-full h-max flex flex-col justify-center items-center relative pt-20 pb-10 bg-white">
                 <div class="flex flex-col items-center justify-center">
-                    <h1 class="text-xl text-secondary uppercase antialiased tracking-widest">contact</h1>
+                    <h1 class="text-xl text-secondary uppercase antialiased tracking-widest xs:text-2xl">contact</h1>
                     <div class="w-full h-1 bg-primary rounded-lg"></div>
                 </div>
                 <div class="flex flex-col items-center justify-center gap-y-4 w-full h-max mt-16 max-w-sm">
@@ -357,42 +357,42 @@
                         <div>
                             <img src="./images/contact/mail-svgrepo-com.svg" alt="Email" class="h-10 object-contain" />
                         </div>
-                        <p class="text-sm text-secondary mt-5">ivnditchon@gmail.com</p>
+                        <p class="text-sm text-secondary mt-5 xs:text-base">ivnditchon@gmail.com</p>
                     </div>
                     <!-- Phone -->
                     <div class="flex flex-col items-center justify-center w-full h-max px-3 py-5 shadow-lg rounded-md border border-gray-200">
                         <div>
                             <img src="./images/contact/phone-svgrepo-com.svg" alt="Email" class="h-10 object-contain" />
                         </div>
-                        <p class="text-sm text-secondary mt-5">+639 067 387 075</p>
+                        <p class="text-sm text-secondary mt-5 xs:text-base">+639 067 387 075</p>
                     </div>
                     <!-- location -->
                     <div class="flex flex-col items-center justify-center w-full h-max px-3 py-5 shadow-lg rounded-md border border-gray-200">
                         <div>
                             <img src="./images/contact/location.svg" alt="Location" class="h-10 object-contain" />
                         </div>
-                        <p class="text-sm text-secondary mt-5 text-center">#001, Rosary Heights II, Notre Dame University Compound, Cotabato City, Philippines, 9600</p>
+                        <p class="text-sm text-secondary mt-5 text-center xs:text-base">#001, Rosary Heights II, Notre Dame University Compound, Cotabato City, Philippines, 9600</p>
                     </div>
                 </div>
             </div>
         </div>
         <!-- Footer container -->
         <div class="w-full h-max flex flex-col justify-center items-start relative bottom-0 py-5 px-5 bg-secondary opacity-95">
-            <div class="w-full h-max flex justify-start items-start gap-x-3">
+            <div class="w-full h-max flex justify-start items-start gap-x-3 xs:gap-x-4">
                 <a href="#">
-                    <img src="./images/social_media/github.svg" alt="Github" class="h-6 object-contain" />
+                    <img src="./images/social_media/github.svg" alt="Github" class="h-6 object-contain xs:h-7" />
                 </a>
                 <a href="#">
-                    <img src="./images/social_media/linkedin.svg" alt="Linkedin" class="h-6 object-contain" />
+                    <img src="./images/social_media/linkedin.svg" alt="Linkedin" class="h-6 object-contain xs:h-7" />
                 </a>
                 <a href="#">
-                    <img src="./images/social_media/twitter.svg" alt="Twitter" class="h-6 object-contain" />
+                    <img src="./images/social_media/twitter.svg" alt="Twitter" class="h-6 object-contain xs:h-7" />
                 </a>
                 <a href="#">
-                    <img src="./images/social_media/facebook.svg" alt="facebook" class="h-6 object-contain" />
+                    <img src="./images/social_media/facebook.svg" alt="facebook" class="h-6 object-contain xs:h-7" />
                 </a>
             </div>
-            <p class="text-xs text-gray-200 mt-5">ivanditchon-porfolio 2.0 &copy; 2022</p>
+            <p class="text-xs text-gray-200 mt-5 xs:text-base">ivanditchon-porfolio 2.0 &copy; 2022</p>
         </div>
     </div>
 
