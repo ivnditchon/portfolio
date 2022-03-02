@@ -1350,6 +1350,30 @@ Ensure the default browser behavior of the `hidden` attribute.
 
 @media (min-width: 400px) {
   @media (orientation: landscape) {
+    .xs\:landscape\:h-72 {
+      height: 18rem;
+    }
+  }
+
+  @media (orientation: landscape) {
+    .xs\:landscape\:w-80 {
+      width: 20rem;
+    }
+  }
+
+  @media (orientation: landscape) {
+    .xs\:landscape\:w-11\/12 {
+      width: 91.666667%;
+    }
+  }
+
+  @media (orientation: landscape) {
+    .xs\:landscape\:w-4\/5 {
+      width: 80%;
+    }
+  }
+
+  @media (orientation: landscape) {
     .xs\:landscape\:px-10 {
       padding-left: 2.5rem;
       padding-right: 2.5rem;
