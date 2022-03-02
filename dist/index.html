@@ -22,9 +22,10 @@
     <meta name="twitter:image:alt" content="Ivan Ditchon image" />
     <meta name="twitter:site" content="@ivnditchon" />
     <link rel="stylesheet" href="./css/style.css" />
-
+    <!-- Swiper library (image slideshow)-->
     <link rel="stylesheet" href="https://unpkg.com/swiper@8/swiper-bundle.min.css" />
-
+    <!-- AOS library -->
+    <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
     <link rel="apple-touch-icon" href="./icon.ico" type="ico" />
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -111,16 +112,16 @@
         <div class="w-full h-max px-5 xs:landscape:px-10 md:px-7 md:landscape:px-10 xl:landscape:px-20">
             <!-- About section -->
             <div id="about" role="region" class="w-full h-max flex flex-col justify-center items-center relative py-20 bg-white">
-                <div class="flex flex-col items-center justify-center">
+                <div data-aos="fade-right" class="flex flex-col items-center justify-center">
                     <h1 class="text-2xl text-secondary uppercase antialiased tracking-widest xs:text-3xl">about</h1>
                     <div class="w-full h-1 bg-primary rounded-lg"></div>
                 </div>
                 <div class="flex flex-col justify-center items-center mt-24">
-                    <div class="relative">
+                    <div data-aos="fade-right" class="relative">
                         <div class="absolute -left-3 -top-3 h-28 w-28 ring-8 rounded-sm ring-primary xs:h-32 xs:w-32"></div>
                         <img src="./images/my_image.jpg" alt="" class="h-28 object-contain rounded-lg relative z-50 xs:h-32" />
                     </div>
-                    <p class="px-2 mt-10 text-xs text-justify text-secondary antialiased xs:text-sm">
+                    <p data-aos="fade-right" class="px-2 mt-10 text-xs text-justify text-secondary antialiased xs:text-sm">
                         Hi, my name is Ivan Ditchon. As of now, I am still keep practing just to develop and enhance my skills on front end development and UX/UI design. I've created some projects so that, I could apply all the knowledge that I have and could land a job as a
                         front end developer. In my downtime, I enjoying reading manga and about web API's.
                     </p>
@@ -128,13 +129,13 @@
             </div>
             <!-- Skills section -->
             <div id="skills" role="region" class="w-full h-max flex flex-col justify-center items-center relative pt-20 pb-10 bg-white">
-                <div class="flex flex-col items-center justify-center">
+                <div data-aos="fade-right" class="flex flex-col items-center justify-center">
                     <h1 class="text-2xl text-secondary uppercase antialiased tracking-widest xs:text-3xl">software skills</h1>
                     <div class="w-full h-1 bg-primary rounded-lg"></div>
                 </div>
                 <div class="flex flex-col items-center justify-center gap-y-4 w-full h-max mt-16 max-w-sm">
                     <!-- HTML -->
-                    <div class="flex flex-col items-center justify-center w-full h-max px-3 py-5 shadow-lg rounded-md border border-gray-200">
+                    <div data-aos="fade-right" class="flex flex-col items-center justify-center w-full h-max px-3 py-5 shadow-lg rounded-md border border-gray-200">
                         <div>
                             <img src="./images/html.svg" alt="HTML" class="h-16 object-contain xs:h-20">
                         </div>
@@ -149,7 +150,7 @@
                         </div>
                     </div>
                     <!-- CSS -->
-                    <div class="flex flex-col items-center justify-center w-full h-max px-3 py-5 shadow-lg rounded-md border border-gray-200">
+                    <div data-aos="fade-right" class="flex flex-col items-center justify-center w-full h-max px-3 py-5 shadow-lg rounded-md border border-gray-200">
                         <div>
                             <img src="./images/css.svg" alt="HTML" class="h-16 object-contain xs:h-20">
                         </div>
@@ -164,7 +165,7 @@
                         </div>
                     </div>
                     <!-- Javascript -->
-                    <div class="flex flex-col items-center justify-center w-full h-max px-3 py-5 shadow-lg rounded-md border border-gray-200">
+                    <div data-aos="fade-right" class="flex flex-col items-center justify-center w-full h-max px-3 py-5 shadow-lg rounded-md border border-gray-200">
                         <div>
                             <img src="./images/javascript.svg" alt="HTML" class="h-16 object-contain xs:h-20">
                         </div>
@@ -179,7 +180,7 @@
                         </div>
                     </div>
                     <!-- React container -->
-                    <div class="flex flex-col items-center justify-center w-full h-max px-3 py-5 shadow-lg rounded-md border border-gray-200">
+                    <div data-aos="fade-right" class="flex flex-col items-center justify-center w-full h-max px-3 py-5 shadow-lg rounded-md border border-gray-200">
                         <div>
                             <img src="./images/react.svg" alt="HTML" class="h-16 object-contain xs:h-20">
                         </div>
@@ -194,7 +195,7 @@
                         </div>
                     </div>
                     <!-- Figma container -->
-                    <div class="flex flex-col items-center justify-center w-full h-max px-3 py-5 shadow-lg rounded-md border border-gray-200">
+                    <div data-aos="fade-right" class="flex flex-col items-center justify-center w-full h-max px-3 py-5 shadow-lg rounded-md border border-gray-200">
                         <div>
                             <img src="./images/figma.svg" alt="HTML" class="h-16 object-contain xs:h-20">
                         </div>
@@ -209,7 +210,7 @@
                         </div>
                     </div>
                     <!-- Adobe xd section -->
-                    <div class="flex flex-col items-center justify-center w-full h-max px-3 py-5 shadow-lg rounded-md border border-gray-200">
+                    <div data-aos="fade-right" class="flex flex-col items-center justify-center w-full h-max px-3 py-5 shadow-lg rounded-md border border-gray-200">
                         <div>
                             <img src="./images/adobexd.svg" alt="HTML" class="h-16 object-contain xs:h-20">
                         </div>
@@ -227,7 +228,7 @@
             </div>
             <!-- Experience section -->
             <div id="experience" role="region" class="w-full h-max flex flex-col justify-center items-center relative pt-20 pb-10 bg-white">
-                <div class="flex flex-col items-center justify-center">
+                <div data-aos="fade-right" class="flex flex-col items-center justify-center">
                     <h1 class="text-xl text-secondary uppercase antialiased tracking-widest xs:text-2xl">experience</h1>
                     <div class="w-full h-1 bg-primary rounded-lg"></div>
                 </div>
@@ -235,7 +236,7 @@
                     <div class="w-0.5 h-96 bg-gray-200 "></div>
                     <!-- Experience 1 -->
                     <div class="w-1/2 h-max absolute top-0 left-0 px-2 py-2 shadow-lg rounded-md border border-gray-200">
-                        <div class="flex flex-col">
+                        <div data-aos="fade-right" class="flex flex-col">
                             <h2 class="text-secondary antialiased text-sm font-medium md:text-lg xs:text-base">IT Staff</h2>
                             <p class="py-0.5 text-secondary text-sm overflow-auto whitespace-nowrap capitalize antialiased">precious cabana ynna beach resort</p>
                             <p class="py-0.5 text-secondary text-sm overflow-auto whitespace-nowrap antialiased"><i>Dec. 12, 2018 - Dec 31, 2021</i></p>
@@ -248,7 +249,7 @@
                     </div>
                     <!-- Experience 2 -->
                     <div class="w-1/2 h-max absolute top-1/2 transform -translate-y-1/2 right-0 px-2 py-2 shadow-lg border border-gray-200 rounded-md">
-                        <div class="flex flex-col">
+                        <div data-aos="fade-left" class="flex flex-col">
                             <h2 class="text-secondary antialiased text-sm font-medium md:text-lg xs:text-base">Payroll Clerk</h2>
                             <p class="py-0.5 text-secondary text-sm overflow-auto whitespace-nowrap capitalize antialiased">precious cabana ynna beach resort</p>
                             <p class="py-0.5 text-secondary text-sm overflow-auto whitespace-nowrap antialiased"><i>Jan. 7, 2020 - Dec 31, 2021</i></p>
@@ -260,7 +261,7 @@
                         </span>
                     </div>
                     <!-- Experience 3 -->
-                    <div class="w-1/2 h-max absolute bottom-0 left-0 px-2 py-2 shadow-lg border border-gray-200 rounded-md">
+                    <div data-aos="fade-right" class="w-1/2 h-max absolute bottom-0 left-0 px-2 py-2 shadow-lg border border-gray-200 rounded-md">
                         <div class="relative z-50">
                             <h2 class="text-secondary antialiased text-sm font-medium md:text-lg xs:text-base">Sales</h2>
                             <p class="py-0.5 text-secondary text-sm overflow-auto whitespace-nowrap capitalize antialiased">precious cabana ynna beach resort</p>
@@ -276,13 +277,13 @@
             </div>
             <!-- Projects container -->
             <div id="project" role="region" class="w-full h-max flex flex-col justify-center items-center relative pt-20 pb-10 bg-white">
-                <div class="flex flex-col items-center justify-center">
+                <div data-aos="fade-right" class="flex flex-col items-center justify-center">
                     <h1 class="text-xl text-secondary uppercase antialiased tracking-widest xs:text-2xl">featured project</h1>
                     <div class="w-full h-1 bg-primary rounded-lg"></div>
                 </div>
 
                 <!-- Slider main container -->
-                <div class="swiper w-full h-max mt-16">
+                <div data-aos="fade-right" class="swiper w-full h-max mt-16">
                     <!-- Additional required wrapper -->
                     <div class="swiper-wrapper">
                         <!-- Slides -->
@@ -333,11 +334,11 @@
             </div>
             <!-- Download -->
             <div id="download" role="region" class="w-full h-max flex flex-col justify-center items-center relative pt-20 pb-10 bg-white">
-                <div class="flex flex-col items-center justify-center">
+                <div data-aos="fade-right" class="flex flex-col items-center justify-center">
                     <h1 class="text-xl text-secondary uppercase antialiased tracking-widest xs:text-2xl">hire me!</h1>
                     <div class="w-full h-1 bg-primary rounded-lg"></div>
                 </div>
-                <div class="w-full h-max flex flex-col items-center justify-center py-5 mt-16 border border-gray-200 rounded-md shadow-lg max-w-sm">
+                <div data-aos="fade-right" class="w-full h-max flex flex-col items-center justify-center py-5 mt-16 border border-gray-200 rounded-md shadow-lg max-w-sm">
                     <img src="./images/cloud-download-svgrepo-com.svg" alt="Download" class="h-14 animate-bounce" />
                     <button class="font-semibold outline-none border-2 mt-2 border-primary px-3 py-2 uppercase antialiased tracking-widest rounded-sm text-primary
                     transtion duration-500 hover:text-gray-200 hover:bg-primary">
@@ -347,27 +348,27 @@
             </div>
             <!-- Contact container -->
             <div id="contact" role="region" class="w-full h-max flex flex-col justify-center items-center relative pt-20 pb-10 bg-white">
-                <div class="flex flex-col items-center justify-center">
+                <div data-aos="fade-right" class="flex flex-col items-center justify-center">
                     <h1 class="text-xl text-secondary uppercase antialiased tracking-widest xs:text-2xl">contact</h1>
                     <div class="w-full h-1 bg-primary rounded-lg"></div>
                 </div>
                 <div class="flex flex-col items-center justify-center gap-y-4 w-full h-max mt-16 max-w-sm">
                     <!-- Email -->
-                    <div class="flex flex-col items-center justify-center w-full h-max px-3 py-5 shadow-lg rounded-md border border-gray-200">
+                    <div data-aos="fade-right" class="flex flex-col items-center justify-center w-full h-max px-3 py-5 shadow-lg rounded-md border border-gray-200">
                         <div>
                             <img src="./images/contact/mail-svgrepo-com.svg" alt="Email" class="h-10 object-contain" />
                         </div>
                         <p class="text-sm text-secondary mt-5 xs:text-base">ivnditchon@gmail.com</p>
                     </div>
                     <!-- Phone -->
-                    <div class="flex flex-col items-center justify-center w-full h-max px-3 py-5 shadow-lg rounded-md border border-gray-200">
+                    <div data-aos="fade-right" class="flex flex-col items-center justify-center w-full h-max px-3 py-5 shadow-lg rounded-md border border-gray-200">
                         <div>
                             <img src="./images/contact/phone-svgrepo-com.svg" alt="Email" class="h-10 object-contain" />
                         </div>
                         <p class="text-sm text-secondary mt-5 xs:text-base">+639 067 387 075</p>
                     </div>
                     <!-- location -->
-                    <div class="flex flex-col items-center justify-center w-full h-max px-3 py-5 shadow-lg rounded-md border border-gray-200">
+                    <div data-aos="fade-right" class="flex flex-col items-center justify-center w-full h-max px-3 py-5 shadow-lg rounded-md border border-gray-200">
                         <div>
                             <img src="./images/contact/location.svg" alt="Location" class="h-10 object-contain" />
                         </div>
@@ -397,6 +398,15 @@
     </div>
 
     <script src="./js/swiper.js" type="module"></script>
+
+    <!-- AOS (animate on scroll library) -->
+    <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+    <script>
+        AOS.init({
+            duration: 1000,
+            once: true
+        });
+    </script>
 </body>
 
 </html>
