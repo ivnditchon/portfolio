@@ -1,0 +1,23 @@
+{
+    "name": "portfolio",
+    "version": "1.0.0",
+    "description": "",
+    "main": "index.js",
+    "scripts": {
+        "build": "npx tailwindcss -i ./src/tailwindcss/style.css -o ./dist/css/style.css --watch"
+    },
+    "repository": {
+        "type": "git",
+        "url": "git+https://github.com/ivnditchon/portfolio.git"
+    },
+    "keywords": [],
+    "author": "Ivan Ditchon",
+    "license": "ISC",
+    "bugs": {
+        "url": "https://github.com/ivnditchon/portfolio/issues"
+    },
+    "homepage": "https://github.com/ivnditchon/portfolio#readme",
+    "dependencies": {
+        "@glidejs/glide": "^3.5.2"
+    }
+}
