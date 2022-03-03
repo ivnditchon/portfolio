@@ -1,5 +1,6 @@
 module.exports = {
     content: ["./dist/**/*.{html,js}"],
+    darkMode: 'class',
     theme: {
         screens: {
             'xs': '400px',
@@ -23,7 +24,8 @@ module.exports = {
         extend: {
             colors: {
                 'primary': '#1f217b',
-                'secondary': '#070606'
+                'secondary': '#070606',
+                'darkMode': '#0f0f0f'
             },
             fontFamily: {
                 'sans': 'Poppins',
@@ -38,7 +40,8 @@ module.exports = {
                 'skills-graph-javascript': 'graphJavascript 3s ease-in-out 1.5s forwards',
                 'skills-graph-react': 'graphReact 2s ease-in-out 2s forwards',
                 'skills-graph-figma': 'graphFigma 2s ease-in-out 2.5s forwards',
-                'skills-graph-adobe': 'graphAdobe 2s ease-in-out 3s forwards'
+                'skills-graph-adobe': 'graphAdobe 2s ease-in-out 3s forwards',
+                'dark-mode': 'darkMode 0.4s ease-in-out forwards'
             },
             keyframes: {
                 graphHTML: {
@@ -87,6 +90,14 @@ module.exports = {
                     },
                     '100%': {
                         width: '30%'
+                    }
+                },
+                darkMode: {
+                    'from': {
+                        transform: 'translate(0%, -50%)'
+                    },
+                    'to': {
+                        transform: 'translate(100%, -50%)',
                     }
                 }
             }
