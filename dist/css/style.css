@@ -572,10 +572,6 @@ Ensure the default browser behavior of the `hidden` attribute.
   right: -0.25rem;
 }
 
-.top-1\/2 {
-  top: 50%;
-}
-
 .-left-2 {
   left: -0.5rem;
 }
@@ -738,13 +734,12 @@ Ensure the default browser behavior of the `hidden` attribute.
   max-width: 24rem;
 }
 
-.-translate-x-1\/2 {
-  --tw-translate-x: -50%;
-  transform: translate(var(--tw-translate-x), var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y));
+.max-w-xl {
+  max-width: 36rem;
 }
 
-.-translate-y-1\/2 {
-  --tw-translate-y: -50%;
+.-translate-x-1\/2 {
+  --tw-translate-x: -50%;
   transform: translate(var(--tw-translate-x), var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y));
 }
 
@@ -802,6 +797,131 @@ Ensure the default browser behavior of the `hidden` attribute.
 .animate-ping {
   -webkit-animation: ping 1s cubic-bezier(0, 0, 0.2, 1) infinite;
           animation: ping 1s cubic-bezier(0, 0, 0.2, 1) infinite;
+}
+
+@-webkit-keyframes graphHTML {
+  0% {
+    width: 0%;
+  }
+
+  100% {
+    width: 90%;
+  }
+}
+
+@keyframes graphHTML {
+  0% {
+    width: 0%;
+  }
+
+  100% {
+    width: 90%;
+  }
+}
+
+.animate-skills-graph-html {
+  -webkit-animation: graphHTML 2s ease-in-out 0.5s forwards;
+          animation: graphHTML 2s ease-in-out 0.5s forwards;
+}
+
+@-webkit-keyframes graphCSS {
+  0% {
+    width: 0%;
+  }
+
+  100% {
+    width: 80%;
+  }
+}
+
+@keyframes graphCSS {
+  0% {
+    width: 0%;
+  }
+
+  100% {
+    width: 80%;
+  }
+}
+
+.animate-skills-graph-css {
+  -webkit-animation: graphCSS 2s ease-in-out 1s forwards;
+          animation: graphCSS 2s ease-in-out 1s forwards;
+}
+
+@-webkit-keyframes graphJavascript {
+  0% {
+    width: 0%;
+  }
+
+  100% {
+    width: 60%;
+  }
+}
+
+@keyframes graphJavascript {
+  0% {
+    width: 0%;
+  }
+
+  100% {
+    width: 60%;
+  }
+}
+
+.animate-skills-graph-javascript {
+  -webkit-animation: graphJavascript 3s ease-in-out 1.5s forwards;
+          animation: graphJavascript 3s ease-in-out 1.5s forwards;
+}
+
+@-webkit-keyframes graphFigma {
+  0% {
+    width: 0%;
+  }
+
+  100% {
+    width: 30%;
+  }
+}
+
+@keyframes graphFigma {
+  0% {
+    width: 0%;
+  }
+
+  100% {
+    width: 30%;
+  }
+}
+
+.animate-skills-graph-figma {
+  -webkit-animation: graphFigma 2s ease-in-out 2.5s forwards;
+          animation: graphFigma 2s ease-in-out 2.5s forwards;
+}
+
+@-webkit-keyframes graphAdobe {
+  0% {
+    width: 0%;
+  }
+
+  100% {
+    width: 30%;
+  }
+}
+
+@keyframes graphAdobe {
+  0% {
+    width: 0%;
+  }
+
+  100% {
+    width: 30%;
+  }
+}
+
+.animate-skills-graph-adobe {
+  -webkit-animation: graphAdobe 2s ease-in-out 3s forwards;
+          animation: graphAdobe 2s ease-in-out 3s forwards;
 }
 
 .flex-col {
@@ -1143,6 +1263,10 @@ Ensure the default browser behavior of the `hidden` attribute.
   transition-duration: 500ms;
 }
 
+.duration-300 {
+  transition-duration: 300ms;
+}
+
 .hover\:bg-primary:hover {
   --tw-bg-opacity: 1;
   background-color: rgb(31 33 123 / var(--tw-bg-opacity));
@@ -1208,10 +1332,6 @@ Ensure the default browser behavior of the `hidden` attribute.
 
   .xs\:h-4 {
     height: 1rem;
-  }
-
-  .xs\:h-7 {
-    height: 1.75rem;
   }
 
   .xs\:w-8 {
@@ -1350,20 +1470,14 @@ Ensure the default browser behavior of the `hidden` attribute.
 
 @media (min-width: 400px) {
   @media (orientation: landscape) {
+    .xs\:landscape\:mb-10 {
+      margin-bottom: 2.5rem;
+    }
+  }
+
+  @media (orientation: landscape) {
     .xs\:landscape\:h-72 {
       height: 18rem;
-    }
-  }
-
-  @media (orientation: landscape) {
-    .xs\:landscape\:w-80 {
-      width: 20rem;
-    }
-  }
-
-  @media (orientation: landscape) {
-    .xs\:landscape\:w-11\/12 {
-      width: 91.666667%;
     }
   }
 
