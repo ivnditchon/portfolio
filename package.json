@@ -16,5 +16,9 @@
     "bugs": {
         "url": "https://github.com/ivnditchon/portfolio/issues"
     },
-    "homepage": "https://github.com/ivnditchon/portfolio#readme"
+    "homepage": "https://github.com/ivnditchon/portfolio#readme",
+    "dependencies": {
+        "install": "^0.13.0",
+        "npm": "^8.5.2"
+    }
 }
