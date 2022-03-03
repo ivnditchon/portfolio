@@ -34,16 +34,34 @@
     <title>Ivan Ditchon - Portfolio</title>
 </head>
 
-<body>
+<body class="dark:bg-darkMode">
     <div class="w-full h-max scroll-smooth overflow-scroll">
         <!-- Home section -->
         <div role="region" id="home" class="w-full h-screen relative landscape:flex landscape:items-center landscape:justify-between">
             <div id="top_bar" role="banner" class="w-full h-max flex justify-between items-center fixed top-0 z-50 px-5 py-3 transition duration-500">
-                <button class="w-14 h-max flex justify-start items-center border border-gray-200 px-0.5 py-0.5 shadow-md rounded-lg md:w-16">
-                    <svg id="topbar_darkmode_icon" xmlns="http://www.w3.org/2000/svg" class="text-gray-900 h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M20.354 15.354A9 9 0 018.646 3.646 9.003 9.003 0 0012 21a9.003 9.003 0 008.354-5.646z" />
+                <button id="dark_mode_btn">
+                    <!-- Dark icon --> 
+                    <svg id="topbar_darkmode_icon" xmlns="http://www.w3.org/2000/svg" class="h-6 w-6 text-gray-900" viewBox="0 0 20 20" fill="currentColor">
+                        <path d="M17.293 13.293A8 8 0 016.707 2.707a8.001 8.001 0 1010.586 10.586z" />
                     </svg>
                 </button>
+
+                <!-- <button id="dark_mode_btn" class="w-16 h-auto px-1 py-1 flex justify-between items-center bg-gray-500 outline-none rounded-full relative">
+                    <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+                        <path stroke-linecap="round" stroke-linejoin="round" d="M20.354 15.354A9 9 0 018.646 3.646 9.003 9.003 0 0012 21a9.003 9.003 0 008.354-5.646z" />
+                    </svg>
+                    <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+                        <path stroke-linecap="round" stroke-linejoin="round" d="M12 3v1m0 16v1m9-9h-1M4 12H3m15.364 6.364l-.707-.707M6.343 6.343l-.707-.707m12.728 0l-.707.707M6.343 17.657l-.707.707M16 12a4 4 0 11-8 0 4 4 0 018 0z" />
+                    </svg>
+                    
+                    <!-- <div id="topbar_darkmode_icon" class="absolute left-0 top-1/2 transform -translate-y-1/2 text-gray-900
+                    h-5 w-5 bg-white rounded-full"></div> -->
+                <!--.
+                    <svg id="topbar_darkmode_icon" xmlns="http://www.w3.org/2000/svg" class="absolute left-0 top-1/2 transform -translate-y-1/2 text-gray-900
+                     h-6 w-6 bg-white rounded-full" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M20.354 15.354A9 9 0 018.646 3.646 9.003 9.003 0 0012 21a9.003 9.003 0 008.354-5.646z" />
+                    </svg>
+                </button>  -->
                 <div class="hidden xl:flex md:flex-1 max-w-xs">
                     <ul class="w-full flex justify-evenly">
                         <li class="">
@@ -81,15 +99,15 @@
                     </ul>
                 </div>
                 <button class="xl:hidden">
-                    <svg id="topbar_menu_icon" xmlns="http://www.w3.org/2000/svg" class="h-6 w-6 md:h-7 md:w-8 text-gray-900" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                    <svg id="topbar_menu_icon" xmlns="http://www.w3.org/2000/svg" class="h-6 w-6 md:h-7 md:w-8 text-gray-900 dark:text-gray-200" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                         <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16" />
                     </svg>
                 </button>
             </div>
             <!-- Main text -->
             <div class="w-full h-max absolute top-32 px-5 z-40 flex flex-col items-start landscape:static landscape:w-2/3 xs:top-44">
-                <h1 class="text-4xl text-gray-900 font-bold tracking-wide xs:text-5xl">Hi, I am <strong class="text-primary">Ivan</strong></h1>
-                <p class="py-2 text-xs text-gray-900 xs:text-sm">A self-taught front end developer who love's to code and create personal projects</p>
+                <h1 class="text-4xl text-gray-900 font-bold tracking-wide xs:text-5xl dark:text-gray-200">Hi, I am <strong class="text-primary">Ivan</strong></h1>
+                <p class="py-2 text-xs text-gray-900 xs:text-sm dark:text-gray-200">A self-taught front end developer who love's to code and create personal projects</p>
                 <div class="mt-3 flex justify-center md:mt-8">
                     <button class="px-3 py-2.5 mt-3 text-sm text-gray-200 font-semibold bg-primary outline-none uppercase antialiased tracking-widest rounded-sm">
                         Featured project
@@ -112,9 +130,9 @@
         <!-- Sections container -->
         <div class="w-full h-max px-5 xs:landscape:px-10 md:px-7 md:landscape:px-10 xl:landscape:px-20">
             <!-- About section -->
-            <div id="about" role="region" class="w-full h-max flex flex-col justify-center items-center relative py-20 bg-white">
+            <div id="about" role="region" class="w-full h-max flex flex-col justify-center items-center relative py-20 bg-white dark:bg-darkMode">
                 <div data-aos="fade-right" class="flex flex-col items-center justify-center">
-                    <h1 class="text-2xl text-secondary uppercase antialiased tracking-widest xs:text-3xl">about</h1>
+                    <h1 class="text-2xl text-secondary uppercase antialiased tracking-widest xs:text-3xl dark:text-gray-200">about</h1>
                     <div class="w-full h-1 bg-primary rounded-lg"></div>
                 </div>
                 <div class="flex flex-col justify-center items-center mt-24">
@@ -122,21 +140,22 @@
                         <div class="absolute -left-3 -top-3 h-28 w-28 ring-8 rounded-sm ring-primary xs:h-32 xs:w-32"></div>
                         <img src="./images/my_image.jpg" alt="" class="h-28 object-contain rounded-lg relative z-50 xs:h-32" />
                     </div>
-                    <p data-aos="fade-right" class="px-2 mt-10 text-xs text-justify text-secondary antialiased xs:text-sm">
+                    <p data-aos="fade-right" class="px-2 mt-10 text-xs text-justify text-secondary antialiased xs:text-sm dark:text-gray-200">
                         Hi, my name is Ivan Ditchon. As of now, I am still keep practing just to develop and enhance my skills on front end development and UX/UI design. I've created some projects so that, I could apply all the knowledge that I have and could land a job as a
                         front end developer. In my downtime, I enjoying reading manga and about web API's.
                     </p>
                 </div>
             </div>
             <!-- Skills section -->
-            <div id="skills" role="region" class="w-full h-max flex flex-col justify-center items-center relative pt-20 pb-10 bg-white">
+            <div id="skills" role="region" class="w-full h-max flex flex-col justify-center items-center relative pt-20 pb-10 bg-white dark:bg-darkMode">
                 <div data-aos="fade-right" class="flex flex-col items-center justify-center">
-                    <h1 class="text-2xl text-secondary uppercase antialiased tracking-widest xs:text-3xl">software skills</h1>
+                    <h1 class="text-2xl text-secondary uppercase antialiased tracking-widest xs:text-3xl dark:text-gray-200">software skills</h1>
                     <div class="w-full h-1 bg-primary rounded-lg"></div>
                 </div>
                 <div class="flex flex-col items-center justify-center gap-y-4 w-full h-max mt-16 max-w-sm">
                     <!-- HTML -->
-                    <div data-aos="fade-right" class="flex flex-col items-center justify-center w-full h-max px-3 py-5 shadow-lg rounded-md border border-gray-200">
+                    <div data-aos="fade-right" class="flex flex-col items-center justify-center w-full h-max px-3 py-5 shadow-lg rounded-md border border-gray-200
+                    dark:bg-white">
                         <div>
                             <img src="./images/html.svg" alt="HTML" class="h-16 object-contain xs:h-20">
                         </div>
@@ -151,7 +170,8 @@
                         </div>
                     </div>
                     <!-- CSS -->
-                    <div data-aos="fade-right" class="flex flex-col items-center justify-center w-full h-max px-3 py-5 shadow-lg rounded-md border border-gray-200">
+                    <div data-aos="fade-right" class="flex flex-col items-center justify-center w-full h-max px-3 py-5 shadow-lg rounded-md border border-gray-200
+                    dark:bg-white">
                         <div>
                             <img src="./images/css.svg" alt="HTML" class="h-16 object-contain xs:h-20">
                         </div>
@@ -166,7 +186,7 @@
                         </div>
                     </div>
                     <!-- Javascript -->
-                    <div data-aos="fade-right" class="flex flex-col items-center justify-center w-full h-max px-3 py-5 shadow-lg rounded-md border border-gray-200">
+                    <div data-aos="fade-right" class="flex flex-col items-center justify-center w-full h-max px-3 py-5 shadow-lg rounded-md border border-gray-200 dark:bg-white">
                         <div>
                             <img src="./images/javascript.svg" alt="HTML" class="h-16 object-contain xs:h-20">
                         </div>
@@ -181,7 +201,7 @@
                         </div>
                     </div>
                     <!-- React container -->
-                    <div data-aos="fade-right" class="flex flex-col items-center justify-center w-full h-max px-3 py-5 shadow-lg rounded-md border border-gray-200">
+                    <div data-aos="fade-right" class="flex flex-col items-center justify-center w-full h-max px-3 py-5 shadow-lg rounded-md border border-gray-200 dark:bg-white">
                         <div>
                             <img src="./images/react.svg" alt="HTML" class="h-16 object-contain xs:h-20">
                         </div>
@@ -196,7 +216,7 @@
                         </div>
                     </div>
                     <!-- Figma container -->
-                    <div data-aos="fade-right" class="flex flex-col items-center justify-center w-full h-max px-3 py-5 shadow-lg rounded-md border border-gray-200">
+                    <div data-aos="fade-right" class="flex flex-col items-center justify-center w-full h-max px-3 py-5 shadow-lg rounded-md border border-gray-200 dark:bg-white">
                         <div>
                             <img src="./images/figma.svg" alt="HTML" class="h-16 object-contain xs:h-20">
                         </div>
@@ -211,7 +231,7 @@
                         </div>
                     </div>
                     <!-- Adobe xd section -->
-                    <div data-aos="fade-right" class="flex flex-col items-center justify-center w-full h-max px-3 py-5 shadow-lg rounded-md border border-gray-200">
+                    <div data-aos="fade-right" class="flex flex-col items-center justify-center w-full h-max px-3 py-5 shadow-lg rounded-md border border-gray-200 dark:bg-white">
                         <div>
                             <img src="./images/adobexd.svg" alt="HTML" class="h-16 object-contain xs:h-20">
                         </div>
@@ -228,15 +248,15 @@
                 </div>
             </div>
             <!-- Experience section -->
-            <div id="experience" role="region" class="w-full h-max flex flex-col justify-center items-center relative pt-20 pb-10 bg-white">
+            <div id="experience" role="region" class="w-full h-max flex flex-col justify-center items-center relative pt-20 pb-10 bg-white dark:bg-darkMode">
                 <div data-aos="fade-right" class="flex flex-col items-center justify-center">
-                    <h1 class="text-xl text-secondary uppercase antialiased tracking-widest xs:text-2xl">experience</h1>
+                    <h1 class="text-xl text-secondary uppercase antialiased tracking-widest xs:text-2xl dark:text-gray-200">experience</h1>
                     <div class="w-full h-1 bg-primary rounded-lg"></div>
                 </div>
                 <div class="flex justify-center items-center w-full h-max mt-16 relative xs:landscape:w-4/5">
                     <div class="w-0.5 h-96 bg-gray-200 "></div>
                     <!-- Experience 1 -->
-                    <div data-aos="fade-right" class="w-1/2 h-max absolute top-0 left-0 px-2 py-2 shadow-lg rounded-md border border-gray-200">
+                    <div data-aos="fade-right" class="w-1/2 h-max absolute top-0 left-0 px-2 py-2 shadow-lg rounded-l-md border border-gray-200 dark:bg-white">
                         <div class="flex flex-col">
                             <h2 class="text-secondary antialiased text-sm font-medium md:text-lg xs:text-base">IT Staff</h2>
                             <p class="py-0.5 text-secondary text-sm overflow-auto whitespace-nowrap capitalize antialiased">precious cabana ynna beach resort</p>
@@ -249,7 +269,7 @@
                         </span>
                     </div>
                     <!-- Experience 2 -->
-                    <div data-aos="fade-left" class="w-1/2 h-max absolute right-0 px-2 py-2 shadow-lg border border-gray-200 rounded-md">
+                    <div data-aos="fade-left" class="w-1/2 h-max absolute right-0 px-2 py-2 shadow-lg border border-gray-200 rounded-r-md dark:bg-white">
                         <div class="flex flex-col">
                             <h2 class="text-secondary antialiased text-sm font-medium md:text-lg xs:text-base">Payroll Clerk</h2>
                             <p class="py-0.5 text-secondary text-sm overflow-auto whitespace-nowrap capitalize antialiased">precious cabana ynna beach resort</p>
@@ -262,7 +282,7 @@
                         </span>
                     </div>
                     <!-- Experience 3 -->
-                    <div data-aos="fade-right" class="w-1/2 h-max absolute bottom-0 left-0 px-2 py-2 shadow-lg border border-gray-200 rounded-md">
+                    <div data-aos="fade-right" class="w-1/2 h-max absolute bottom-0 left-0 px-2 py-2 shadow-lg border border-gray-200 rounded-l-md dark:bg-white">
                         <div class="relative z-50">
                             <h2 class="text-secondary antialiased text-sm font-medium md:text-lg xs:text-base">Sales</h2>
                             <p class="py-0.5 text-secondary text-sm overflow-auto whitespace-nowrap capitalize antialiased">precious cabana ynna beach resort</p>
@@ -277,14 +297,14 @@
                 </div>
             </div>
             <!-- Projects container -->
-            <div id="project" role="region" class="w-full h-max flex flex-col justify-center items-center relative pt-20 pb-10 bg-white">
+            <div id="project" role="region" class="w-full h-max flex flex-col justify-center items-center relative pt-20 pb-10 bg-white dark:bg-darkMode">
                 <div data-aos="fade-right" class="flex flex-col items-center justify-center">
-                    <h1 class="text-xl text-secondary uppercase antialiased tracking-widest xs:text-2xl">featured project</h1>
+                    <h1 class="text-xl text-secondary uppercase antialiased tracking-widest xs:text-2xl dark:text-gray-200">featured project</h1>
                     <div class="w-full h-1 bg-primary rounded-lg"></div>
                 </div>
 
                 <!-- Slider main container -->
-                <div data-aos="fade-right" class="swiper w-full max-w-xl h-max mt-16">
+                <div data-aos="fade-right" class="swiper w-full max-w-xl h-max mt-16 hadow-lg rounded-md border border-gray-200 dark:bg-white">
                     <!-- Additional required wrapper -->
                     <div class="swiper-wrapper">
                         <!-- Slides -->
@@ -334,12 +354,12 @@
                 </div>
             </div>
             <!-- Download -->
-            <div id="download" role="region" class="w-full h-max flex flex-col justify-center items-center relative pt-20 pb-10 bg-white">
+            <div id="download" role="region" class="w-full h-max flex flex-col justify-center items-center relative pt-20 pb-10 bg-white dark:bg-darkMode">
                 <div data-aos="fade-right" class="flex flex-col items-center justify-center">
-                    <h1 class="text-xl text-secondary uppercase antialiased tracking-widest xs:text-2xl">hire me!</h1>
+                    <h1 class="text-xl text-secondary uppercase antialiased tracking-widest xs:text-2xl dark:text-gray-200">hire me!</h1>
                     <div class="w-full h-1 bg-primary rounded-lg"></div>
                 </div>
-                <div data-aos="fade-right" class="w-full h-max flex flex-col items-center justify-center py-5 mt-16 border border-gray-200 rounded-md shadow-lg max-w-sm">
+                <div data-aos="fade-right" class="w-full h-max flex flex-col items-center justify-center py-5 mt-16 border border-gray-200 rounded-md shadow-lg max-w-sm dark:bg-white">
                     <img src="./images/cloud-download-svgrepo-com.svg" alt="Download" class="h-14 animate-bounce" />
                     <button class="font-semibold outline-none border-2 mt-2 border-primary px-3 py-2 uppercase antialiased tracking-widest rounded-sm text-primary
                     transtion duration-500 hover:text-gray-200 hover:bg-primary">
@@ -348,28 +368,30 @@
                 </div>
             </div>
             <!-- Contact container -->
-            <div id="contact" role="region" class="w-full h-max flex flex-col justify-center items-center relative pt-20 pb-10 bg-white">
+            <div id="contact" role="region" class="w-full h-max flex flex-col justify-center items-center relative pt-20 pb-10 bg-white dark:bg-darkMode">
                 <div data-aos="fade-right" class="flex flex-col items-center justify-center">
-                    <h1 class="text-xl text-secondary uppercase antialiased tracking-widest xs:text-2xl">contact</h1>
+                    <h1 class="text-xl text-secondary uppercase antialiased tracking-widest xs:text-2xl dark:text-gray-200">contact</h1>
                     <div class="w-full h-1 bg-primary rounded-lg"></div>
                 </div>
                 <div class="flex flex-col items-center justify-center gap-y-4 w-full h-max mt-16 max-w-sm">
                     <!-- Email -->
-                    <div data-aos="fade-right" class="flex flex-col items-center justify-center w-full h-max px-3 py-5 shadow-lg rounded-md border border-gray-200">
+                    <div data-aos="fade-right" class="flex flex-col items-center justify-center w-full h-max px-3 py-5 shadow-lg rounded-md border border-gray-200
+                    dark:bg-white">
                         <div>
                             <img src="./images/contact/mail-svgrepo-com.svg" alt="Email" class="h-10 object-contain" />
                         </div>
                         <p class="text-sm text-secondary mt-5 xs:text-base">ivnditchon@gmail.com</p>
                     </div>
                     <!-- Phone -->
-                    <div data-aos="fade-right" class="flex flex-col items-center justify-center w-full h-max px-3 py-5 shadow-lg rounded-md border border-gray-200">
+                    <div data-aos="fade-right" class="flex flex-col items-center justify-center w-full h-max px-3 py-5 shadow-lg rounded-md border border-gray-200
+                    dark:bg-white">
                         <div>
                             <img src="./images/contact/phone-svgrepo-com.svg" alt="Email" class="h-10 object-contain" />
                         </div>
                         <p class="text-sm text-secondary mt-5 xs:text-base">+639 067 387 075</p>
                     </div>
                     <!-- location -->
-                    <div data-aos="fade-right" class="flex flex-col items-center justify-center w-full h-max px-3 py-5 shadow-lg rounded-md border border-gray-200">
+                    <div data-aos="fade-right" class="flex flex-col items-center justify-center w-full h-max px-3 py-5 shadow-lg rounded-md border border-gray-200 dark:bg-white">
                         <div>
                             <img src="./images/contact/location.svg" alt="Location" class="h-10 object-contain" />
                         </div>
