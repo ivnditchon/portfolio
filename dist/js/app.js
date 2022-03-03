@@ -1,4 +1,5 @@
 // DOM Elements
+const html = document.querySelector('html');
 const topBar = document.querySelector('#top_bar');
 const topBarMenuIcon = document.querySelector('#topbar_menu_icon');
 const topBarDarkmodeIcon = document.querySelector('#topbar_darkmode_icon');
@@ -8,6 +9,7 @@ const javascriptBarGraph = document.querySelector('#javascript_bar_graph');
 const reactBarGraph = document.querySelector('#react_bar_graph');
 const figmaBarGraph = document.querySelector('#figma_bar_graph');
 const adobeBarGraph = document.querySelector('#adobe_bar_graph');
+const darkModeBtn = document.querySelector('#dark_mode_btn');
 
 // Scroll event
 const scroll = () => {
@@ -47,8 +49,38 @@ const scroll = () => {
     });
 }
 
+const darkModeToggle = () => {
+    darkModeBtn.addEventListener('click', (e) => {
+        e.preventDefault();
+
+        if (localStorage.theme === 'dark') {
+            html.classList.remove('dark');
+            localStorage.removeItem('theme');
+            topBarDarkmodeIcon.classList.add('text-gray-900');
+            topBarDarkmodeIcon.classList.remove('text-gray-200');
+        } else {
+            html.classList.add('dark');
+            localStorage.theme = 'dark';
+            topBarDarkmodeIcon.classList.remove('text-gray-900');
+            topBarDarkmodeIcon.classList.add('text-gray-200');
+        }
+    });
+}
+
+const darkMode = () => {
+    if (localStorage.theme === 'dark') {
+        html.classList.add('dark');
+    } else {
+        html.classList.remove('dark');
+    }
+}
+
 const main = () => {
     scroll();
+    darkModeToggle();
+    document.addEventListener('DOMContentLoaded', () => {
+        darkMode();
+    })
 }
 
 main();
