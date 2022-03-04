@@ -29,22 +29,32 @@ module.exports = {
             },
             fontFamily: {
                 'sans': 'Poppins',
+                'title': 'Alfa Slab One'
             },
             backgroundImage: theme => ({
                 'skills': 'url("../images/skills.jpg")',
                 'experience': 'url("../images/experience.jpg")'
             }),
             animation: {
-                'skills-graph-html': 'graphHTML 2s ease-in-out 0.5s forwards',
+                /*'skills-graph-html': 'graphHTML 2s ease-in-out 0.5s forwards',
                 'skills-graph-css': 'graphCSS 2s ease-in-out 1s forwards',
                 'skills-graph-javascript': 'graphJavascript 3s ease-in-out 1.5s forwards',
                 'skills-graph-react': 'graphReact 2s ease-in-out 2s forwards',
                 'skills-graph-figma': 'graphFigma 2s ease-in-out 2.5s forwards',
-                'skills-graph-adobe': 'graphAdobe 2s ease-in-out 3s forwards',
-                'dark-mode': 'darkMode 0.4s ease-in-out forwards'
+                'skills-graph-adobe': 'graphAdobe 2s ease-in-out 3s forwards',*/
+                'dark-mode': 'darkMode 0.4s ease-in-out forwards',
+                'skills': 'skills 0.3s linear forwards'
             },
             keyframes: {
-                graphHTML: {
+                skills: {
+                    '0%': {
+                        transform: 'scale(1)'
+                    },
+                    '100%': {
+                        transform: 'scale(1.1)'
+                    }
+                },
+                /*graphHTML: {
                     '0%': {
                         width: '0%',
                     },
@@ -91,7 +101,7 @@ module.exports = {
                     '100%': {
                         width: '30%'
                     }
-                },
+                },*/
                 darkMode: {
                     'from': {
                         transform: 'translate(0%, -50%)'
