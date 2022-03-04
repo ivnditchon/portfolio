@@ -1463,6 +1463,14 @@ Ensure the default browser behavior of the `hidden` attribute.
     grid-column: 1 / -1;
   }
 
+  .md\:col-span-2 {
+    grid-column: span 2 / span 2;
+  }
+
+  .md\:col-span-1 {
+    grid-column: span 1 / span 1;
+  }
+
   .md\:mt-8 {
     margin-top: 2rem;
   }
@@ -1770,6 +1778,24 @@ Ensure the default browser behavior of the `hidden` attribute.
   }
 
   @media (orientation: landscape) {
+    .md\:landscape\:col-span-2 {
+      grid-column: span 2 / span 2;
+    }
+  }
+
+  @media (orientation: landscape) {
+    .md\:landscape\:col-span-1 {
+      grid-column: span 1 / span 1;
+    }
+  }
+
+  @media (orientation: landscape) {
+    .md\:landscape\:col-span-3 {
+      grid-column: span 3 / span 3;
+    }
+  }
+
+  @media (orientation: landscape) {
     .md\:landscape\:h-96 {
       height: 24rem;
     }
@@ -1784,6 +1810,30 @@ Ensure the default browser behavior of the `hidden` attribute.
   @media (orientation: landscape) {
     .md\:landscape\:grid-cols-3 {
       grid-template-columns: repeat(3, minmax(0, 1fr));
+    }
+  }
+
+  @media (orientation: landscape) {
+    .md\:landscape\:grid-cols-1 {
+      grid-template-columns: repeat(1, minmax(0, 1fr));
+    }
+  }
+
+  @media (orientation: landscape) {
+    .md\:landscape\:grid-cols-2 {
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+  }
+
+  @media (orientation: landscape) {
+    .md\:landscape\:content-center {
+      align-content: center;
+    }
+  }
+
+  @media (orientation: landscape) {
+    .md\:landscape\:place-self-end {
+      place-self: end;
     }
   }
 
@@ -2100,6 +2150,13 @@ Ensure the default browser behavior of the `hidden` attribute.
   @media (orientation: landscape) {
     .xl\:landscape\:text-8xl {
       font-size: 6rem;
+      line-height: 1;
+    }
+  }
+
+  @media (orientation: landscape) {
+    .xl\:landscape\:text-6xl {
+      font-size: 3.75rem;
       line-height: 1;
     }
   }
