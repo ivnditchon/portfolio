@@ -25,7 +25,9 @@ module.exports = {
             colors: {
                 'primary': '#1f217b',
                 'secondary': '#070606',
-                'darkMode': '#0f0f0f'
+                'darkMode-primary': '#1f1f1f',
+                'darkMode-secondary': '#030303',
+                'darkMode-text': '#575df5'
             },
             fontFamily: {
                 'sans': 'Poppins',
