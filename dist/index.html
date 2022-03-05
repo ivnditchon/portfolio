@@ -34,117 +34,136 @@
     <title>Ivan Ditchon - Portfolio</title>
 </head>
 
-<body class="dark:bg-darkMode">
+<body>
     <div class="w-full h-max scroll-smooth overflow-scroll flex flex-col justify-center items-center">
-        <!-- Topbar -->
-        <div id="top_bar" role="banner" class="w-full h-12 flex justify-between items-center border-b border-gray-200 px-5 py-7 max-w-5xl xl:landscape:px-0">
-            <!-- Social media icons -->
-            <div class="hidden xl:flex">
-                <a href="#" class="mr-3">
-                    <img src="./images/social_media/github.svg" alt="Github" class="h-6 object-contain" />
-                </a>
-                <a href="#" class="mr-3">
-                    <img src="./images/social_media/linkedin.svg" alt="Linkedin" class="h-6 object-contain" />
-                </a>
-                <a href="#" class="mr-3">
-                    <img src="./images/social_media/twitter.svg" alt="Twitter" class="h-6 object-contain" />
-                </a>
-                <a href="#">
-                    <img src="./images/social_media/facebook.svg" alt="facebook" class="h-6 object-contain" />
-                </a>
-            </div>
-            <button id="dark_mode_btn" class="xl:hidden">
-                <!-- Dark icon --> 
-                <svg id="topbar_darkmode_icon" xmlns="http://www.w3.org/2000/svg" class="h-6 w-6 text-gray-900" viewBox="0 0 20 20" fill="currentColor">
-                    <path d="M17.293 13.293A8 8 0 016.707 2.707a8.001 8.001 0 1010.586 10.586z" />
-                </svg>
-            </button>
-            <!-- Navigation -->
-            <div role="navigation" class="hidden xl:flex xl:items-center">
-                <ul class="w-full flex">
-                    <li class="hover:animate-bounce group">
-                        <a href="#" class="text-sm text-secondary font-medium tracking-wider uppercase antialiased group-hover:text-black group-hover:font-semibold">about</a>
-                    </li>
-                    <li class="ml-5 hover:animate-bounce group">
-                        <a href="#" class="text-sm text-secondary font-medium tracking-wider uppercase antialiased group-hover:text-black group-hover:font-semibold">skills</a>
-                    </li>
-                    <li class="ml-5 hover:animate-bounce group">
-                        <a href="#" class="text-sm text-secondary font-medium tracking-wider uppercase antialiased group-hover:text-black group-hover:font-semibold">experience</a>
-                    </li>
-                    <li class="ml-5 hover:animate-bounce group">
-                        <a href="#" class="text-sm text-secondary font-medium tracking-wider uppercase antialiased group-hover:text-black group-hover:font-semibold">project</a>
-                    </li>
-                    <li class="ml-5 hover:animate-bounce group">
-                        <a href="#" class="text-sm text-secondary font-medium tracking-wider uppercase antialiased group-hover:text-black group-hover:font-semibold">contact</a>
-                    </li>
-                    <li class="hidden xl:flex ml-5">
-                        <button id="dark_mode_btn">
-                            <!-- Dark icon --> 
-                            <svg id="topbar_darkmode_icon" xmlns="http://www.w3.org/2000/svg" class="h-6 w-6 text-gray-900" viewBox="0 0 20 20" fill="currentColor">
-                                <path d="M17.293 13.293A8 8 0 016.707 2.707a8.001 8.001 0 1010.586 10.586z" />
-                            </svg>
-                        </button>
-                    </li>
-                </ul>
-            </div>
-            <button class="xl:hidden">
+        <!-- Home and Topbar container-->
+        <div class="w-full h-max relative flex flex-col justify-center items-center dark:bg-darkMode-primary">
+            <!-- Topbar -->
+            <div id="top_bar" role="banner" class="w-full h-12 flex justify-between items-center md:landscape:border-b md:lanscape:border-gray-200 px-5 py-7 max-w-5xl xl:landscape:px-0 dark:border-gray-500">
+                <!-- Social media icons -->
+                <div class="hidden xl:flex xl:gap-x-3">
+                    <!-- Github -->
+                    <a href="#">
+                        <svg role="img" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" class="h-6 object-contain fill-current text-primary dark:text-darkMode-text">
+                            <title>GitHub</title>
+                            <path d="M12 .297c-6.63 0-12 5.373-12 12 0 5.303 3.438 9.8 8.205 11.385.6.113.82-.258.82-.577 0-.285-.01-1.04-.015-2.04-3.338.724-4.042-1.61-4.042-1.61C4.422 18.07 3.633 17.7 3.633 17.7c-1.087-.744.084-.729.084-.729 1.205.084 1.838 1.236 1.838 1.236 1.07 1.835 2.809 1.305 3.495.998.108-.776.417-1.305.76-1.605-2.665-.3-5.466-1.332-5.466-5.93 0-1.31.465-2.38 1.235-3.22-.135-.303-.54-1.523.105-3.176 0 0 1.005-.322 3.3 1.23.96-.267 1.98-.399 3-.405 1.02.006 2.04.138 3 .405 2.28-1.552 3.285-1.23 3.285-1.23.645 1.653.24 2.873.12 3.176.765.84 1.23 1.91 1.23 3.22 0 4.61-2.805 5.625-5.475 5.92.42.36.81 1.096.81 2.22 0 1.606-.015 2.896-.015 3.286 0 .315.21.69.825.57C20.565 22.092 24 17.592 24 12.297c0-6.627-5.373-12-12-12"/>
+                        </svg>
+                        <!-- <img src="./images/social_media/github.svg" alt="Github" class="h-6 object-contain dark:text-darkMode-secondary" /> -->
+                    </a>
+                    <!-- Linkedin -->
+                    <a href="#">
+                        <svg role="img" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" class="h-6 fill-current text-primary dark:text-darkMode-text">
+                            <title>LinkedIn</title><path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433c-1.144 0-2.063-.926-2.063-2.065 0-1.138.92-2.063 2.063-2.063 1.14 0 2.064.925 2.064 2.063 0 1.139-.925 2.065-2.064 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/>
+                        </svg>
+                    </a>
+                    <!-- Twitter -->
+                    <a href="#">
+                        <svg role="img" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" class="h-6 fill-current text-primary dark:text-darkMode-text">
+                            <title>Twitter</title>
+                            <path d="M23.953 4.57a10 10 0 01-2.825.775 4.958 4.958 0 002.163-2.723c-.951.555-2.005.959-3.127 1.184a4.92 4.92 0 00-8.384 4.482C7.69 8.095 4.067 6.13 1.64 3.162a4.822 4.822 0 00-.666 2.475c0 1.71.87 3.213 2.188 4.096a4.904 4.904 0 01-2.228-.616v.06a4.923 4.923 0 003.946 4.827 4.996 4.996 0 01-2.212.085 4.936 4.936 0 004.604 3.417 9.867 9.867 0 01-6.102 2.105c-.39 0-.779-.023-1.17-.067a13.995 13.995 0 007.557 2.209c9.053 0 13.998-7.496 13.998-13.985 0-.21 0-.42-.015-.63A9.935 9.935 0 0024 4.59z"/>
+                        </svg>
+                    </a>
+                    <!-- Facebook -->
+                    <a href="#">
+                        <svg role="img" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" class="h-6 fill-current text-primary dark:text-darkMode-text">
+                            <title>Facebook</title>
+                            <path d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z"/>
+                        </svg>
+                    </a>
+                </div>
+                <button id="mobile_dark_mode_btn" class="xl:hidden">
+                    <!-- Dark icon --> 
+                    <svg id="topbar_darkmode_icon" xmlns="http://www.w3.org/2000/svg" class="h-6 w-6 text-gray-900 pointer-events-none" viewBox="0 0 20 20" fill="currentColor">
+                        <path d="M17.293 13.293A8 8 0 016.707 2.707a8.001 8.001 0 1010.586 10.586z" class="pointer-events-none" />
+                    </svg>
+                </button>
+                <!-- Navigation -->
+                <div role="navigation" class="hidden xl:flex xl:items-center">
+                    <ul class="w-full flex">
+                        <li class="hover:animate-bounce group">
+                            <a href="#" class="text-sm text-secondary font-medium tracking-wider uppercase antialiased group-hover:text-black group-hover:font-semibold dark:text-gray-200 dark:group-hover:text-white">about</a>
+                        </li>
+                        <li class="ml-5 hover:animate-bounce group">
+                            <a href="#" class="text-sm text-secondary font-medium tracking-wider uppercase antialiased group-hover:text-black group-hover:font-semibold dark:text-gray-200 dark:group-hover:text-white">skills</a>
+                        </li>
+                        <li class="ml-5 hover:animate-bounce group">
+                            <a href="#" class="text-sm text-secondary font-medium tracking-wider uppercase antialiased group-hover:text-black group-hover:font-semibold dark:text-gray-200 dark:group-hover:text-white">experience</a>
+                        </li>
+                        <li class="ml-5 hover:animate-bounce group">
+                            <a href="#" class="text-sm text-secondary font-medium tracking-wider uppercase antialiased group-hover:text-black group-hover:font-semibold dark:text-gray-200 dark:group-hover:text-white">project</a>
+                        </li>
+                        <li class="ml-5 hover:animate-bounce group">
+                            <a href="#" class="text-sm text-secondary font-medium tracking-wider uppercase antialiased group-hover:text-black group-hover:font-semibold dark:text-gray-200 dark:group-hover:text-white">contact</a>
+                        </li>
+                        <li class="hidden xl:flex ml-5">
+                            <button id="nav_dark_mode_btn">
+                                <!-- Dark icon --> 
+                                <svg id="topbar_darkmode_icon" xmlns="http://www.w3.org/2000/svg" class="h-6 w-6 text-gray-900 pointer-events-none" viewBox="0 0 20 20" fill="currentColor">
+                                    <path d="M17.293 13.293A8 8 0 016.707 2.707a8.001 8.001 0 1010.586 10.586z" class="pointer-events-none" />
+                                </svg>
+                            </button>
+                        </li>
+                    </ul>
+                </div>
+                <button class="xl:hidden">
                 <svg id="topbar_menu_icon" xmlns="http://www.w3.org/2000/svg" class="h-6 w-6 md:h-7 md:w-8 text-gray-900 dark:text-gray-200" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                     <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16" />
                 </svg>
             </button>
-        </div>
-        <!-- Home section -->
-        <div role="region" id="home" class="w-full h-[calc(100vh_-_48px)] flex flex-col justify-center gap-10 relative max-w-5xl landscape:flex-row landscape:items-center md:items-center md:gap-20">
-            <!-- Main text -->
-            <div class="w-full h-max flex flex-col items-start px-5">
-                <h1 class="text-4xl text-gray-900 font-bold tracking-wide dark:text-gray-200 landscape:text-3xl xs:text-5xl xs:landscape:text-5xl md:text-6xl md:landscape:text-7xl xl:landscape:text-8xl">Hi, I am <strong class="text-primary">Ivan</strong></h1>
-                <p class="py-2 text-xs text-gray-900 landscape:text-xs xs:text-sm xs:landscape:text-sm dark:text-gray-200 md:text-base md:landscape:text-base">A self-taught front end developer who love's to code and create personal projects</p>
-                <div class="mt-3 flex justify-center md:mt-8">
-                    <button class="px-3 py-2.5 mt-3 text-sm text-white font-semibold border-2 border-primary bg-primary outline-none uppercase antialiased tracking-widest rounded-sm 
+            </div>
+            <!-- Home section -->
+            <div role="region" id="home" class="w-full h-[calc(100vh_-_48px)] flex flex-col justify-center gap-10 relative max-w-5xl landscape:flex-row landscape:items-center md:items-center md:gap-20">
+                <!-- Main text -->
+                <div class="w-full h-max flex flex-col items-start px-5">
+                    <h1 class="text-4xl text-gray-900 font-bold tracking-wide dark:text-white landscape:text-3xl xs:text-5xl xs:landscape:text-5xl md:text-6xl md:landscape:text-7xl xl:landscape:text-8xl">Hi, I am <strong class="text-primary dark:text-darkMode-text">Ivan</strong></h1>
+                    <p class="py-2 text-xs text-gray-900 landscape:text-xs xs:text-sm xs:landscape:text-sm dark:text-white md:text-base md:landscape:text-base">A self-taught front end developer who love's to code and create personal projects</p>
+                    <div class="mt-3 flex justify-center md:mt-8">
+                        <button class="px-3 py-2.5 mt-3 text-sm text-white font-semibold border-2 border-primary bg-primary outline-none uppercase antialiased tracking-widest rounded-sm 
                     landscape:text-xs landscape:py-3 landscape:px-3 md:text-base md:px-4 md:py-3 md:landscape:px-3 md:landscape:py-2.5 md:landscape:text-base hover:bg-white 
-                    hover:text-primary transition duration-500">
+                    hover:text-primary transition duration-500 dark:bg-darkMode-text dark:text-white dark:border-darkMode-text dark:hover:bg-darkMode-secondary dark:hover:text-darkMode-text">
                     Featured project 
                 </button>
+                    </div>
                 </div>
-            </div>
-            <!-- Button swipe -->
-            <div class="absolute left-1/2 bottom-2 transform -translate-x-1/2 z-40">
-                <button class="animate-bounce">
+                <!-- Button swipe -->
+                <div class="absolute left-1/2 bottom-2 transform -translate-x-1/2 z-40">
+                    <button class="animate-bounce">
                 <svg xmlns="http://www.w3.org/2000/svg" class="h-7 w-7 text-gray-500 xs:h-8 xs:w-8 md:h-9 md:w-9" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                     <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7" />
                 </svg>
             </button>
-            </div>
-            <!-- Hero -->
-            <div class="w-full h-max flex justify-end">
-                <img src="./images/hero.png" alt="Hero" class="h-52 object-contain landscape:h-48 xs:h-72 xs:landscape:h-72 md:h-96 md:landscape:h-96 xl:landscape:h-full">
+                </div>
+                <!-- Hero -->
+                <div class="w-full h-max flex justify-end">
+                    <img src="./images/hero.png" alt="Hero" class="h-52 object-contain landscape:h-48 xs:h-72 xs:landscape:h-72 md:h-96 md:landscape:h-96 xl:landscape:h-full">
+                </div>
             </div>
         </div>
         <!-- Sections container -->
-        <div class="w-full h-max px-5 bg-gray-200 flex flex-col justify-center items-center max-w-5xl rounded-lg">
+        <div class="w-full h-max px-5 bg-gray-200 flex flex-col justify-center items-center dark:bg-darkMode-secondary">
             <!-- About section -->
-            <div id="about" role="region" class="w-full h-max flex flex-col justify-center items-center relative py-20 bg-gray-200 dark:bg-darkMode">
-                <h1 data-aos="fade-right" class="text-4xl font-bold text-secondary capitalize antialiased tracking-wider dark:text-gray-200 xl:landscape:text-5xl">about</h1>
+            <div id="about" role="region" class="w-full h-max flex flex-col justify-center items-center relative py-20 bg-gray-200 dark:bg-darkMode-secondary max-w-5xl">
+                <h1 data-aos="fade-right" class="text-4xl font-bold text-secondary capitalize antialiased tracking-wider dark:text-white xl:landscape:text-5xl">about</h1>
                 <div class="flex flex-col justify-center items-center mt-20 max-w-5xl md:landscape:flex-row md:landscape:items-center">
                     <div data-aos="fade-right" class="w-56 max-w-sm h-max relative flex justify-center px-2 py-2 md:landscape:flex-1">
-                        <div class="absolute left-10 bottom-5 w-28 h-28 border-8 border-primary rounded-lg xs:w-32 xs:h-32 xs:transform xs:-translate-x-3 xs:-translate-y-2 md:w-40 md:h-40 md:-translate-x-8 md:landscape:translate-x-12"></div>
+                        <div class="absolute left-10 bottom-5 w-28 h-28 border-8 border-primary rounded-lg xs:w-32 xs:h-32 xs:transform xs:-translate-x-3 xs:-translate-y-2 md:w-40 md:h-40 md:-translate-x-8 md:landscape:translate-x-12 dark:border-darkMode-text"></div>
                         <img src="./images/my_image.jpg" alt="" class="h-28 object-contain rounded-lg relative z-50 xs:h-32 md:h-40" />
                     </div>
-                    <p data-aos="fade-right" class="px-2 mt-10 text-xs text-justify text-secondary antialiased xs:landscape:px-10 md:px-16 md:landscape:flex-1 md:landscape:mt-0 md:landscape:text-sm xl:landscape:px-32 xl:landscape:text-base">
+                    <p data-aos="fade-right" class="px-2 mt-10 text-xs text-justify text-secondary antialiased dark:text-white xs:landscape:px-10 md:px-16 md:landscape:flex-1 md:landscape:mt-0 md:landscape:text-sm xl:landscape:px-32 xl:landscape:text-base">
                         Hi, my name is Ivan Ditchon. As of now, I am still keep practicing just to develop and enhance my skills in front end development and UX/UI design. I've created some projects so that, I could apply all the knowledge that I have and could land a job as
                         a front end developer. In my downtime, I enjoying reading manga and about web API's.
                     </p>
                 </div>
             </div>
             <!-- Skills section -->
-            <div id="skills" role="region" class="w-full h-max flex flex-col justify-center items-center relative py-20 bg-gray-200 dark:bg-darkMode">
+            <div id="skills" role="region" class="w-full h-max flex flex-col justify-center items-center relative py-20 bg-gray-200 max-w-5xl dark:bg-darkMode-secondary">
                 <div data-aos="fade-right" class="w-full h-max flex items-center justify-between gap-5 md:landscape:px-7">
-                    <h1 class="text-4xl font-bold text-secondary capitalize antialiased tracking-wider dark:text-gray-200 xl:landscape:text-5xl">software skills</h1>
-                    <button class="px-2 py-2 rounded-sm flex justify-center items-center bg-primary border-2 border-primary hover:bg-white group transition duration-500">
-                        <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 text-white mr-1 xl:landscape:w-6 xl:landscape:h-6 group-hover:text-primary" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+                    <h1 class="text-3xl font-bold text-secondary capitalize antialiased tracking-wider dark:text-gray-200 xl:landscape:text-5xl">software skills</h1>
+                    <button class="px-2 py-2 rounded-sm flex justify-center items-center bg-primary border-2 border-primary hover:bg-white group transition duration-500 dark:bg-darkMode-text dark:text-white dark:border-darkMode-text dark:hover:bg-darkMode-secondary dark:hover:text-darkMode-text">
+                        <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 text-white mr-1 xl:landscape:w-6 xl:landscape:h-6 group-hover:text-primary dark:group-hover:text-darkMode-text" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
                             <path stroke-linecap="round" stroke-linejoin="round" d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14" />
                         </svg>
-                        <p class="text-xs text-white whitespace-nowrap font-semibold tracking-wider xs:text-sm xl:landscape:text-base group-hover:text-primary">View all</p>
+                        <p class="text-xs text-white whitespace-nowrap font-semibold tracking-wider xs:text-sm xl:landscape:text-base group-hover:text-primary dark:group-hover:text-darkMode-text">View all</p>
                     </button>
                 </div>
                 <div class="grid grid-cols-1 justify-items-center gap-8 w-full h-max mt-16 xs:landscape:grid-cols-2 md:grid-cols-2 md:landscape:grid-cols-3">
@@ -233,7 +252,7 @@
                 </div>
             </div>
             <!-- Experience section -->
-            <div id="experience" role="region" class="w-full h-max flex flex-col justify-center items-center relative py-20 bg-gray-200 dark:bg-darkMode">
+            <div id="experience" role="region" class="w-full h-max flex flex-col justify-center items-center relative py-20 bg-gray-200 dark:bg-darkMode-secondary max-w-5xl">
                 <h1 data-aos="fade-right" class="text-4xl font-bold text-secondary capitalize antialiased tracking-wider dark:text-gray-200 xl:landscape:text-5xl">experience</h1>
                 <div class="flex justify-center items-center w-full h-max mt-16 relative xs:landscape:w-[88%] md:w-[87%] xl:landscape:w-[90%]">
                     <div class="w-0.5 h-96 bg-white md:h-[28rem] md:landscape:h-[30rem] xl:landscape:h-[32rem]"></div>
@@ -246,8 +265,8 @@
                         </div>
                         <!-- Mark -->
                         <span class="flex h-3 w-3 absolute -right-1.5 -top-2 xl:landscape:h-4 xl:landscape:w-4">
-                            <span class="animate-ping absolute inline-flex h-full w-full rounded-full bg-primary opacity-75"></span>
-                        <span class="relative inline-flex rounded-full h-3 w-3 bg-primary xl:landscape:h-4 xl:landscape:w-4"></span>
+                            <span class="animate-ping absolute inline-flex h-full w-full rounded-full bg-primary opacity-75 dark:bg-darkMode-text"></span>
+                        <span class="relative inline-flex rounded-full h-3 w-3 bg-primary xl:landscape:h-4 xl:landscape:w-4 dark:bg-darkMode-text"></span>
                         </span>
                     </div>
                     <!-- Experience 2 -->
@@ -259,8 +278,8 @@
                         </div>
                         <!-- Mark -->
                         <span class="flex h-3 w-3 absolute -left-2 -top-2 xl:landscape:h-4 xl:landscape:w-4">
-                            <span class="animate-ping absolute inline-flex h-full w-full rounded-full bg-primary opacity-75"></span>
-                        <span class="relative inline-flex rounded-full h-3 w-3 bg-primary xl:landscape:h-4 xl:landscape:w-4"></span>
+                            <span class="animate-ping absolute inline-flex h-full w-full rounded-full bg-primary opacity-75 dark:bg-darkMode-text"></span>
+                        <span class="relative inline-flex rounded-full h-3 w-3 bg-primary xl:landscape:h-4 xl:landscape:w-4 dark:bg-darkMode-text"></span>
                         </span>
                     </div>
                     <!-- Experience 3 -->
@@ -272,14 +291,14 @@
                         </div>
                         <!-- Mark -->
                         <span class="flex h-3 w-3 absolute -right-1.5 -top-2 xl:landscape:h-4 xl:landscape:w-4">
-                            <span class="animate-ping absolute inline-flex h-full w-full rounded-full bg-primary opacity-75"></span>
-                        <span class="relative inline-flex rounded-full h-3 w-3 bg-primary xl:landscape:h-4 xl:landscape:w-4"></span>
+                            <span class="animate-ping absolute inline-flex h-full w-full rounded-full bg-primary opacity-75 dark:bg-darkMode-text"></span>
+                        <span class="relative inline-flex rounded-full h-3 w-3 bg-primary xl:landscape:h-4 xl:landscape:w-4 dark:bg-darkMode-text"></span>
                         </span>
                     </div>
                 </div>
             </div>
             <!-- Projects container -->
-            <div id="project" role="region" class="w-full h-max flex flex-col justify-center items-center relative py-20 bg-gray-200 border border-t-white border-b-white dark:bg-darkMode max-w-5xl">
+            <div id="project" role="region" class="w-full h-max flex flex-col justify-center items-center relative py-20 bg-gray-200 border-t border-b border-t-white border-b-white dark:bg-darkMode-secondary dark:border-t-gray-500 dark:border-b-gray-500 max-w-5xl">
                 <h1 data-aos="fade-right" class="text-4xl text-center font-bold text-secondary capitalize antialiased tracking-wider dark:text-gray-200 xl:landscape:text-5xl">featured projects</h1>
                 <div class="w-full h-max grid grid-cols-1 justify-items-center content-center gap-8 mt-16 md:grid-cols-2">
                     <!-- Ninjavan section -->
@@ -357,64 +376,121 @@
                 </div>
             </div>
             <!-- Download section -->
-            <div id="download" role="region" class="w-full h-max flex flex-col justify-center items-center relative py-12 bg-gray-200 rounded-sm dark:bg-darkMode max-w-5xl">
+            <div id="download" role="region" class="w-full h-max flex flex-col justify-center items-center relative py-12 bg-gray-200 rounded-sm dark:bg-darkMode-secondary max-w-5xl">
                 <h1 data-aos="fade-right" class="text-4xl text-center font-bold text-secondary antialiased tracking-wider dark:text-gray-200 xl:landscape:text-5xl">Hire me!</h1>
                 <div data-aos="fade-right" class="w-full h-max flex flex-col items-center justify-center py-5 mt-16 bg-white rounded-md shadow-lg max-w-lg dark:bg-white">
-                    <img src="./images/cloud-download-svgrepo-com.svg" alt="Download" class="h-14 animate-bounce" />
+                    <svg class="h-14 object-contain fill-current dark:text-darkMode-text animate-bounce md:h-16" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><g data-name="Layer 2"><g data-name="cloud-download">
+                        <rect opacity="0"/><path d="M21.9 11c0-.11-.06-.22-.09-.33a4.17 4.17 0 0 0-.18-.57c-.05-.12-.12-.24-.18-.37s-.15-.3-.24-.44S21 9.08 21 9s-.2-.25-.31-.37-.21-.2-.32-.3L20 8l-.36-.24a3.68 3.68 0 0 0-.44-.23l-.39-.18a4.13 4.13 0 0 0-.5-.15 3 3 0 0 0-.41-.09h-.18A6 6 0 0 0 6.33 7h-.18a3 3 0 0 0-.41.09 4.13 4.13 0 0 0-.5.15l-.39.18a3.68 3.68 0 0 0-.44.23L4.05 8l-.37.31c-.11.1-.22.19-.32.3s-.21.25-.31.37-.18.23-.26.36-.16.29-.24.44-.13.25-.18.37a4.17 4.17 0 0 0-.18.57c0 .11-.07.22-.09.33A5.23 5.23 0 0 0 2 12a5.5 5.5 0 0 0 .09.91c0 .1.05.19.07.29a5.58 5.58 0 0 0 .18.58l.12.29a5 5 0 0 0 .3.56l.14.22a.56.56 0 0 0 .05.08L3 15a5 5 0 0 0 4 2 2 2 0 0 1 .59-1.41A2 2 0 0 1 9 15a1.92 1.92 0 0 1 1 .27V12a2 2 0 0 1 4 0v3.37a2 2 0 0 1 1-.27 2.05 2.05 0 0 1 1.44.61A2 2 0 0 1 17 17a5 5 0 0 0 4-2l.05-.05a.56.56 0 0 0 .05-.08l.14-.22a5 5 0 0 0 .3-.56l.12-.29a5.58 5.58 0 0 0 .18-.58c0-.1.05-.19.07-.29A5.5 5.5 0 0 0 22 12a5.23 5.23 0 0 0-.1-1z"/><path d="M14.31 16.38L13 17.64V12a1 1 0 0 0-2 0v5.59l-1.29-1.3a1 1 0 0 0-1.42 1.42l3 3A1 1 0 0 0 12 21a1 1 0 0 0 .69-.28l3-2.9a1 1 0 1 0-1.38-1.44z"/><rect width="24" height="24" opacity="0"/><path d="M21.9 11c0-.11-.06-.22-.09-.33a4.17 4.17 0 0 0-.18-.57c-.05-.12-.12-.24-.18-.37s-.15-.3-.24-.44S21 9.08 21 9s-.2-.25-.31-.37-.21-.2-.32-.3L20 8l-.36-.24a3.68 3.68 0 0 0-.44-.23l-.39-.18a4.13 4.13 0 0 0-.5-.15 3 3 0 0 0-.41-.09h-.18A6 6 0 0 0 6.33 7h-.18a3 3 0 0 0-.41.09 4.13 4.13 0 0 0-.5.15l-.39.18a3.68 3.68 0 0 0-.44.23L4.05 8l-.37.31c-.11.1-.22.19-.32.3s-.21.25-.31.37-.18.23-.26.36-.16.29-.24.44-.13.25-.18.37a4.17 4.17 0 0 0-.18.57c0 .11-.07.22-.09.33A5.23 5.23 0 0 0 2 12a5.5 5.5 0 0 0 .09.91c0 .1.05.19.07.29a5.58 5.58 0 0 0 .18.58l.12.29a5 5 0 0 0 .3.56l.14.22a.56.56 0 0 0 .05.08L3 15a5 5 0 0 0 4 2 2 2 0 0 1 .59-1.41A2 2 0 0 1 9 15a1.92 1.92 0 0 1 1 .27V12a2 2 0 0 1 4 0v3.37a2 2 0 0 1 1-.27 2.05 2.05 0 0 1 1.44.61A2 2 0 0 1 17 17a5 5 0 0 0 4-2l.05-.05a.56.56 0 0 0 .05-.08l.14-.22a5 5 0 0 0 .3-.56l.12-.29a5.58 5.58 0 0 0 .18-.58c0-.1.05-.19.07-.29A5.5 5.5 0 0 0 22 12a5.23 5.23 0 0 0-.1-1z"/>
+                        <path d="M14.31 16.38L13 17.64V12a1 1 0 0 0-2 0v5.59l-1.29-1.3a1 1 0 0 0-1.42 1.42l3 3A1 1 0 0 0 12 21a1 1 0 0 0 .69-.28l3-2.9a1 1 0 1 0-1.38-1.44z"/>
+                    </svg>
                     <a href="https://drive.google.com/file/d/11BFXBFHmddvQ-GPiOGuBFes9NQDk0TXd/view?usp=sharing" target="_blank">
                         <button class="font-semibold outline-none border-2 mt-2 border-primary px-3 bg-primary py-2 uppercase antialiased tracking-widest rounded-sm text-gray-200
-                    transtion duration-500 hover:text-primary hover:bg-white">
+                    transtion duration-500 hover:text-primary hover:bg-white dark:bg-darkMode-text dark:text-white dark:border-darkMode-text dark:hover:bg-darkMode-secondary dark:hover:text-darkMode-text">
                         download cv
                         </button>
                     </a>
                 </div>
             </div>
             <!-- Contact container -->
-            <div id="contact" role="region" class="w-full h-max flex flex-col justify-center items-center relative py-20 bg-gray-200 dark:bg-darkMode">
+            <div id="contact" role="region" class="w-full h-max flex flex-col justify-center items-center relative py-20 bg-gray-200 dark:bg-darkMode-secondary">
                 <h1 data-aos="fade-right" class="text-4xl text-center font-bold text-secondary capitalize antialiased tracking-wider dark:text-gray-200 xl:landscape:text-5xl">contact</h1>
                 <div class="flex flex-col items-start w-full h-max mt-16 gap-5 xl:landscape:flex-row">
                     <!-- Email -->
-                    <div data-aos="fade-right" class="flex items-center w-full h-max dark:bg-white xl:landscape:justify-center xl:landscape:py-2">
+                    <div data-aos="fade-right" class="flex items-center w-full h-max xl:landscape:justify-center xl:landscape:py-2">
                         <div class="mr-3">
-                            <img src="./images/contact/mail-svgrepo-com.svg" alt="Email" class="h-5 object-contain xl:landscape:h-6" />
+                            <svg version="1.1" class="h-5 xl:landscape:h-6 fill-current text-primary dark:text-darkMode-text" id="Capa_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 400 400" style="enable-background:new 0 0 400 400;"
+                                xml:space="preserve">
+                                <g id="XMLID_1_">
+	                                <polygon id="XMLID_869_" points="0,127.5 0,274.219 104.8,206.1 	"/>
+                                    <polygon id="XMLID_870_" points="400,274.219 400,127.5 295.2,206.1 	"/>
+                                    <polygon id="XMLID_871_" points="200,277.5 130.357,225.268 0,310 0,340 400,340 400,310 269.643,225.268 	"/>
+                                    <polygon id="XMLID_872_" points="0,90 200,240 400,90 400,60 0,60 	"/>
+                                </g>
+                            </svg>
                         </div>
-                        <p class="text-sm text-secondary">ivnditchon@gmail.com</p>
+                        <p class="text-sm text-secondary dark:text-white">ivnditchon@gmail.com</p>
                     </div>
                     <!-- Phone -->
-                    <div data-aos="fade-right" class="flex items-center w-full h-max dark:bg-white xl:landscape:justify-center xl:landscape:border xl:landscape:py-2 xl:landscape:border-l-white
-                    xl:landscape:border-r-white">
+                    <div data-aos="fade-right" class="flex items-center w-full h-max xl:landscape:justify-center xl:landscape:py-2 xl:landscape:border-l xl:landscape:border-r xl:landscape:border-l-white
+                    xl:landscape:border-r-white dark:border-l dark:border-r dark:border-l-gray-500 dark:border-r-gray-500">
                         <div class="mr-3">
-                            <img src="./images/contact/phone-svgrepo-com.svg" alt="Phone" class="h-5 object-contain xl:landscape:h-6" />
+                            <svg version="1.1" class="h-5 xl:landscape:h-6 fill-current text-primary dark:text-darkMode-text" id="Capa_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 60.006 60.006" style="enable-background:new 0 0 60.006 60.006;"
+                                xml:space="preserve">
+                                <path d="M59.427,40.907c-2.008-3.796-8.98-7.912-9.287-8.092c-0.896-0.51-1.831-0.78-2.706-0.78c-1.301,0-2.366,0.596-3.011,1.68
+                                    c-1.02,1.22-2.285,2.646-2.592,2.867c-2.378,1.611-4.237,1.429-6.295-0.629L24.05,24.467c-2.045-2.045-2.233-3.928-0.631-6.292
+                                    c0.224-0.31,1.649-1.575,2.869-2.595c0.778-0.463,1.312-1.15,1.545-1.994c0.312-1.123,0.082-2.444-0.652-3.733
+                                    c-0.173-0.296-4.289-7.269-8.085-9.276c-0.708-0.375-1.505-0.573-2.306-0.573c-1.318,0-2.558,0.514-3.49,1.445l-2.536,2.537
+                                    C6.75,7.998,5.296,12.547,6.443,17.504c0.956,4.132,3.742,8.529,8.282,13.069L29.43,45.278c4.894,4.894,9.592,7.726,14.003,8.46
+                                    c-1.075,2.505-3.565,4.264-6.46,4.264c-3.127,0-5.832-2.013-6.73-5.008l-0.904-3.014c-0.179-0.595-0.717-0.994-1.338-0.994
+                                    s-1.159,0.399-1.338,0.995L25,55.522l-1.662-5.541c-0.179-0.595-0.717-0.994-1.338-0.994s-1.159,0.399-1.338,0.995L19,55.522
+                                    l-1.662-5.541c-0.179-0.595-0.717-0.994-1.338-0.994c-0.621,0-1.159,0.399-1.338,0.995L13,55.522l-1.662-5.541
+                                    c-0.179-0.595-0.717-0.994-1.338-0.994s-1.159,0.399-1.338,0.995L7,55.522l-1.662-5.541C5.159,49.387,4.621,48.987,4,48.987
+                                    s-1.159,0.399-1.338,0.995l-2.62,8.733c-0.158,0.528,0.142,1.086,0.671,1.245C0.809,59.989,0.906,60.003,1,60.003
+                                    c0.431,0,0.828-0.279,0.958-0.713L4,52.483l1.662,5.541C5.841,58.619,6.379,59.018,7,59.018s1.159-0.399,1.338-0.995L10,52.483
+                                    l1.662,5.541c0.179,0.595,0.717,0.994,1.338,0.994s1.159-0.399,1.338-0.995L16,52.483l1.662,5.541
+                                    c0.179,0.595,0.717,0.994,1.338,0.994s1.159-0.399,1.338-0.995L22,52.483l1.662,5.541c0.179,0.595,0.717,0.994,1.338,0.994
+                                    s1.159-0.399,1.338-0.995L28,52.482l0.326,1.087c1.154,3.849,4.629,6.434,8.646,6.434c3.942,0,7.293-2.544,8.521-6.072
+                                    c0.072,0.001,0.146,0.008,0.218,0.008c0.001,0,0,0,0.001,0c3.721,0,7.188-1.581,10.306-4.699l2.537-2.536
+	                                C60.096,45.161,60.447,42.832,59.427,40.907z"/>
+                            </svg>
                         </div>
-                        <p class="text-sm text-secondary">+639 067 387 075</p>
+                        <p class="text-sm text-secondary dark:text-white">+639 067 387 075</p>
                     </div>
                     <!-- location -->
-                    <div data-aos="fade-right" class="flex justify-start w-full h-max dark:bg-white xl:landscape:justify-center xl:landscape:py-2">
+                    <div data-aos="fade-right" class="flex justify-start w-full h-max xl:landscape:justify-center xl:landscape:py-2">
                         <div class="mr-3">
-                            <img src="./images/contact/location.svg" alt="Email" class="h-6 object-contain xl:landscape:h-7" />
+                            <svg version="1.1" class="h-5 xl:landscape:h-6 fill-current text-primary dark:text-darkMode-text" id="Capa_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 264.018 264.018" style="enable-background:new 0 0 264.018 264.018;"
+                                xml:space="preserve">
+                                <g>
+	                                <path d="M132.009,0c-42.66,0-77.366,34.706-77.366,77.366c0,11.634,2.52,22.815,7.488,33.24c0.1,0.223,0.205,0.442,0.317,0.661
+		                                l58.454,113.179c2.146,4.154,6.431,6.764,11.106,6.764c4.676,0,8.961-2.609,11.106-6.764l58.438-113.148
+                                        c0.101-0.195,0.195-0.392,0.285-0.591c5.001-10.455,7.536-21.67,7.536-33.341C209.375,34.706,174.669,0,132.009,0z
+                                        M132.009,117.861c-22.329,0-40.495-18.166-40.495-40.495c0-22.328,18.166-40.494,40.495-40.494s40.495,18.166,40.495,40.494
+                                        C172.504,99.695,154.338,117.861,132.009,117.861z"/>
+	                                <path d="M161.81,249.018h-59.602c-4.143,0-7.5,3.357-7.5,7.5c0,4.143,3.357,7.5,7.5,7.5h59.602c4.143,0,7.5-3.357,7.5-7.5
+		                            C169.31,252.375,165.952,249.018,161.81,249.018z"/>
+                                </g>
+                            </svg>
                         </div>
-                        <p class="w-full text-sm text-secondary">#001, Rosary Heights II, Notre Dame Avenue Compound, Cotabato City, 9600, Philippines</p>
+                        <p class="w-full text-sm text-secondary dark:text-white">#001, Rosary Heights II, Notre Dame Avenue Compound, Cotabato City, 9600, Philippines</p>
                     </div>
                 </div>
             </div>
             <!-- Footer container -->
-            <div class="w-full h-max flex flex-col justify-center items-start relative bottom-0 py-5 bg-gray-200 border border-t-white 
-            xs:w-full xs:landscape:flex-row-reverse xs:landscape:justify-center xs:landscape:items-center md:flex-row-reverse md:justify-center md:items-center">
-                <div class="w-full h-max flex justify-start items-start gap-x-3 bg-gray-200 xs:landscape:flex-1 xs:landscape:justify-end md:flex-1 md:justify-end">
+            <div class="w-full h-max flex flex-col justify-center items-start relative bottom-0 py-5 bg-gray-200 border-t border-t-white 
+            xs:w-full xs:landscape:flex-row-reverse xs:landscape:justify-center xs:landscape:items-center md:flex-row-reverse md:justify-center md:items-center dark:bg-darkMode-secondary 
+            dark:border-t-gray-500">
+                <div class="w-full h-max flex justify-start items-start gap-x-3 bg-gray-200 xs:landscape:flex-1 xs:landscape:justify-end md:flex-1 md:justify-end dark:bg-darkMode-secondary">
+                    <!-- Github -->
                     <a href="#">
-                        <img src="./images/social_media/github.svg" alt="Github" class="h-6 object-contain" />
+                        <svg role="img" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" class="h-6 object-contain fill-current text-primary dark:text-darkMode-text">
+                            <title>GitHub</title>
+                            <path d="M12 .297c-6.63 0-12 5.373-12 12 0 5.303 3.438 9.8 8.205 11.385.6.113.82-.258.82-.577 0-.285-.01-1.04-.015-2.04-3.338.724-4.042-1.61-4.042-1.61C4.422 18.07 3.633 17.7 3.633 17.7c-1.087-.744.084-.729.084-.729 1.205.084 1.838 1.236 1.838 1.236 1.07 1.835 2.809 1.305 3.495.998.108-.776.417-1.305.76-1.605-2.665-.3-5.466-1.332-5.466-5.93 0-1.31.465-2.38 1.235-3.22-.135-.303-.54-1.523.105-3.176 0 0 1.005-.322 3.3 1.23.96-.267 1.98-.399 3-.405 1.02.006 2.04.138 3 .405 2.28-1.552 3.285-1.23 3.285-1.23.645 1.653.24 2.873.12 3.176.765.84 1.23 1.91 1.23 3.22 0 4.61-2.805 5.625-5.475 5.92.42.36.81 1.096.81 2.22 0 1.606-.015 2.896-.015 3.286 0 .315.21.69.825.57C20.565 22.092 24 17.592 24 12.297c0-6.627-5.373-12-12-12"/>
+                        </svg>
+                        <!-- <img src="./images/social_media/github.svg" alt="Github" class="h-6 object-contain dark:text-darkMode-secondary" /> -->
                     </a>
+                    <!-- Linkedin -->
                     <a href="#">
-                        <img src="./images/social_media/linkedin.svg" alt="Linkedin" class="h-6 object-contain" />
+                        <svg role="img" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" class="h-6 fill-current text-primary dark:text-darkMode-text">
+                            <title>LinkedIn</title><path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433c-1.144 0-2.063-.926-2.063-2.065 0-1.138.92-2.063 2.063-2.063 1.14 0 2.064.925 2.064 2.063 0 1.139-.925 2.065-2.064 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/>
+                        </svg>
                     </a>
+                    <!-- Twitter -->
                     <a href="#">
-                        <img src="./images/social_media/twitter.svg" alt="Twitter" class="h-6 object-contain" />
+                        <svg role="img" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" class="h-6 fill-current text-primary dark:text-darkMode-text">
+                            <title>Twitter</title>
+                            <path d="M23.953 4.57a10 10 0 01-2.825.775 4.958 4.958 0 002.163-2.723c-.951.555-2.005.959-3.127 1.184a4.92 4.92 0 00-8.384 4.482C7.69 8.095 4.067 6.13 1.64 3.162a4.822 4.822 0 00-.666 2.475c0 1.71.87 3.213 2.188 4.096a4.904 4.904 0 01-2.228-.616v.06a4.923 4.923 0 003.946 4.827 4.996 4.996 0 01-2.212.085 4.936 4.936 0 004.604 3.417 9.867 9.867 0 01-6.102 2.105c-.39 0-.779-.023-1.17-.067a13.995 13.995 0 007.557 2.209c9.053 0 13.998-7.496 13.998-13.985 0-.21 0-.42-.015-.63A9.935 9.935 0 0024 4.59z"/>
+                        </svg>
                     </a>
+                    <!-- Facebook -->
                     <a href="#">
-                        <img src="./images/social_media/facebook.svg" alt="facebook" class="h-6 object-contain" />
+                        <svg role="img" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" class="h-6 fill-current text-primary dark:text-darkMode-text">
+                            <title>Facebook</title>
+                            <path d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z"/>
+                        </svg>
                     </a>
                 </div>
-                <p class="text-xs text-secondary mt-5 xs:landscape:flex-1 xs:landscape:mt-0 md:flex-1 md:mt-0">Ivan Ditchon</p>
+                <p class="text-xs text-secondary mt-5 xs:landscape:flex-1 xs:landscape:mt-0 md:flex-1 md:mt-0 dark:text-white">Ivan Ditchon</p>
             </div>
         </div>
     </div>
