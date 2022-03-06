@@ -2,6 +2,8 @@
 const html = document.querySelector('html');
 const mobileDarkModeBtn = document.querySelector('#mobile_dark_mode_btn');
 const mobileDarkModeIcon = document.querySelector('#mobile_dark_mode_icon');
+const navDarkModeBtn = document.querySelector('#nav_dark_mode_btn');
+const navDarkModeIcon = document.querySelector('#nav_dark_mode_icon');
 const viewSkillsBtn = document.querySelector('#view_skills_btn');
 const hiddenSkills = document.querySelectorAll('#hidden_skill');
 const viewProjectsBtn = document.querySelector('#view_projects_btn');
@@ -9,7 +11,7 @@ const hiddenProjects = document.querySelectorAll('#hidden_project');
 
 // Darkmode toggle
 const darkModeToggle = () => {
-    mobileDarkModeIcon.addEventListener('click', (e) => {
+    mobileDarkModeBtn.addEventListener('click', (e) => {
         e.preventDefault();
 
         if (localStorage.theme === 'dark') {
@@ -23,10 +25,25 @@ const darkModeToggle = () => {
             mobileDarkModeIcon.src = './images/sun.svg';
         }
     });
+
+    navDarkModeBtn.addEventListener('click', (e) => {
+        e.preventDefault();
+
+        if (localStorage.theme === 'dark') {
+            html.classList.remove('dark');
+            localStorage.removeItem('theme');
+            navDarkModeIcon.src = './images/moon.svg';
+
+        } else {
+            html.classList.add('dark');
+            localStorage.theme = 'dark';
+            navDarkModeIcon.src = './images/sun.svg';
+        }
+    });
 }
 
-// Check darkmode theme in localstorage if existing
-const darkMode = () => {
+// Check mobile darkmode theme equals to dark in localstorage if existing
+const mobileDarkMode = () => {
     if (localStorage.theme === 'dark') {
         html.classList.add('dark');
         mobileDarkModeIcon.src = './images/sun.svg';
@@ -35,6 +52,18 @@ const darkMode = () => {
         mobileDarkModeIcon.src = './images/moon.svg';
     }
 }
+
+// Check desktop/laptop theme equals to dark localstorage if existing
+const desktopDarkMode = () => {
+    if (localStorage.theme === 'dark') {
+        html.classList.add('dark');
+        navDarkModeIcon.src = './images/sun.svg';
+    } else {
+        html.classList.remove('dark');
+        navDarkModeIcon.src = './images/moon.svg';
+    }
+}
+
 
 // Show all skills
 const showAllSkills = () => {
@@ -76,7 +105,8 @@ const main = () => {
     scroll();
     darkModeToggle();
     document.addEventListener('DOMContentLoaded', () => {
-        darkMode();
+        mobileDarkMode();
+        desktopDarkMode();
     });
     showAllSkills();
     showAllProjects();
