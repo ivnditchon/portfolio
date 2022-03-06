@@ -71,15 +71,13 @@ const showAllSkills = () => {
         e.preventDefault();
 
         Array.from(hiddenSkills, (skill) => {
-            if (skill.classList.contains('hidden')) {
-                skill.classList.remove('hidden');
-                skill.classList.remove('opacity-0');
+            if (skill.classList.contains('hidden', 'opacity')) {
+                skill.classList.remove('hidden', 'opacity-0');
                 skill.classList.add('flex');
             } else {
                 if (skill.classList.contains('flex')) {
                     skill.classList.remove('flex');
-                    skill.classList.add('hidden');
-                    skill.classList.add('opacity-0');
+                    skill.classList.add('hidden', 'opacity-0');
                 }
             }
         });
