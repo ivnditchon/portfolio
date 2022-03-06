@@ -596,10 +596,6 @@ Ensure the default browser behavior of the `hidden` attribute.
   z-index: 10;
 }
 
-.mr-3 {
-  margin-right: 0.75rem;
-}
-
 .ml-5 {
   margin-left: 1.25rem;
 }
@@ -632,12 +628,12 @@ Ensure the default browser behavior of the `hidden` attribute.
   margin-top: 0.5rem;
 }
 
-.mt-5 {
-  margin-top: 1.25rem;
+.mr-3 {
+  margin-right: 0.75rem;
 }
 
-.mr-2 {
-  margin-right: 0.5rem;
+.mt-5 {
+  margin-top: 1.25rem;
 }
 
 .flex {
@@ -716,10 +712,6 @@ Ensure the default browser behavior of the `hidden` attribute.
 
 .h-14 {
   height: 3.5rem;
-}
-
-.h-10 {
-  height: 2.5rem;
 }
 
 .w-full {
@@ -844,6 +836,10 @@ Ensure the default browser behavior of the `hidden` attribute.
           animation: ping 1s cubic-bezier(0, 0, 0.2, 1) infinite;
 }
 
+.cursor-pointer {
+  cursor: pointer;
+}
+
 .grid-cols-1 {
   grid-template-columns: repeat(1, minmax(0, 1fr));
 }
@@ -955,21 +951,12 @@ Ensure the default browser behavior of the `hidden` attribute.
   border-width: 8px;
 }
 
-.border {
-  border-width: 1px;
-}
-
-.border-b {
-  border-bottom-width: 1px;
-}
-
 .border-t {
   border-top-width: 1px;
 }
 
-.border-gray-200 {
-  --tw-border-opacity: 1;
-  border-color: rgb(229 231 235 / var(--tw-border-opacity));
+.border-b {
+  border-bottom-width: 1px;
 }
 
 .border-primary {
@@ -985,11 +972,6 @@ Ensure the default browser behavior of the `hidden` attribute.
 .border-b-white {
   --tw-border-opacity: 1;
   border-bottom-color: rgb(255 255 255 / var(--tw-border-opacity));
-}
-
-.border-l-white {
-  --tw-border-opacity: 1;
-  border-left-color: rgb(255 255 255 / var(--tw-border-opacity));
 }
 
 .bg-primary {
@@ -1112,6 +1094,11 @@ Ensure the default browser behavior of the `hidden` attribute.
   line-height: 1rem;
 }
 
+.text-3xl {
+  font-size: 1.875rem;
+  line-height: 2.25rem;
+}
+
 .text-2xl {
   font-size: 1.5rem;
   line-height: 2rem;
@@ -1120,11 +1107,6 @@ Ensure the default browser behavior of the `hidden` attribute.
 .text-base {
   font-size: 1rem;
   line-height: 1.5rem;
-}
-
-.text-3xl {
-  font-size: 1.875rem;
-  line-height: 2.25rem;
 }
 
 .font-medium {
@@ -1300,14 +1282,6 @@ Ensure the default browser behavior of the `hidden` attribute.
   color: rgb(31 33 123 / var(--tw-text-opacity));
 }
 
-.dark .dark\:border-t {
-  border-top-width: 1px;
-}
-
-.dark .dark\:border-b {
-  border-bottom-width: 1px;
-}
-
 .dark .dark\:border-l {
   border-left-width: 1px;
 }
@@ -1356,14 +1330,14 @@ Ensure the default browser behavior of the `hidden` attribute.
   background-color: rgb(87 93 245 / var(--tw-bg-opacity));
 }
 
-.dark .dark\:bg-white {
-  --tw-bg-opacity: 1;
-  background-color: rgb(255 255 255 / var(--tw-bg-opacity));
-}
-
 .dark .dark\:bg-darkMode-secondary {
   --tw-bg-opacity: 1;
   background-color: rgb(3 3 3 / var(--tw-bg-opacity));
+}
+
+.dark .dark\:bg-white {
+  --tw-bg-opacity: 1;
+  background-color: rgb(255 255 255 / var(--tw-bg-opacity));
 }
 
 .dark .dark\:text-darkMode-text {
@@ -1376,14 +1350,14 @@ Ensure the default browser behavior of the `hidden` attribute.
   color: rgb(3 3 3 / var(--tw-text-opacity));
 }
 
-.dark .dark\:text-white {
-  --tw-text-opacity: 1;
-  color: rgb(255 255 255 / var(--tw-text-opacity));
-}
-
 .dark .dark\:text-gray-200 {
   --tw-text-opacity: 1;
   color: rgb(229 231 235 / var(--tw-text-opacity));
+}
+
+.dark .dark\:text-white {
+  --tw-text-opacity: 1;
+  color: rgb(255 255 255 / var(--tw-text-opacity));
 }
 
 .dark .dark\:hover\:bg-darkMode-secondary:hover {
@@ -1396,14 +1370,14 @@ Ensure the default browser behavior of the `hidden` attribute.
   color: rgb(87 93 245 / var(--tw-text-opacity));
 }
 
-.dark .group:hover .dark\:group-hover\:text-darkMode-text {
-  --tw-text-opacity: 1;
-  color: rgb(87 93 245 / var(--tw-text-opacity));
-}
-
 .dark .group:hover .dark\:group-hover\:text-white {
   --tw-text-opacity: 1;
   color: rgb(255 255 255 / var(--tw-text-opacity));
+}
+
+.dark .group:hover .dark\:group-hover\:text-darkMode-text {
+  --tw-text-opacity: 1;
+  color: rgb(87 93 245 / var(--tw-text-opacity));
 }
 
 @media (min-width: 400px) {
@@ -1597,10 +1571,6 @@ Ensure the default browser behavior of the `hidden` attribute.
   .xl\:gap-x-3 {
     -moz-column-gap: 0.75rem;
          column-gap: 0.75rem;
-  }
-
-  .xl\:border-r {
-    border-right-width: 1px;
   }
 }
 
@@ -1873,12 +1843,6 @@ Ensure the default browser behavior of the `hidden` attribute.
   }
 
   @media (orientation: landscape) {
-    .xl\:landscape\:h-7 {
-      height: 1.75rem;
-    }
-  }
-
-  @media (orientation: landscape) {
     .xl\:landscape\:w-6 {
       width: 1.5rem;
     }
@@ -1905,12 +1869,6 @@ Ensure the default browser behavior of the `hidden` attribute.
   @media (orientation: landscape) {
     .xl\:landscape\:justify-center {
       justify-content: center;
-    }
-  }
-
-  @media (orientation: landscape) {
-    .xl\:landscape\:border {
-      border-width: 1px;
     }
   }
 
@@ -1979,6 +1937,32 @@ Ensure the default browser behavior of the `hidden` attribute.
     .xl\:landscape\:text-base {
       font-size: 1rem;
       line-height: 1.5rem;
+    }
+  }
+
+  @media (orientation: landscape) {
+    .dark .xl\:landscape\:dark\:border-l {
+      border-left-width: 1px;
+    }
+  }
+
+  @media (orientation: landscape) {
+    .dark .xl\:landscape\:dark\:border-r {
+      border-right-width: 1px;
+    }
+  }
+
+  @media (orientation: landscape) {
+    .dark .xl\:landscape\:dark\:border-l-gray-500 {
+      --tw-border-opacity: 1;
+      border-left-color: rgb(107 114 128 / var(--tw-border-opacity));
+    }
+  }
+
+  @media (orientation: landscape) {
+    .dark .xl\:landscape\:dark\:border-r-gray-500 {
+      --tw-border-opacity: 1;
+      border-right-color: rgb(107 114 128 / var(--tw-border-opacity));
     }
   }
 }
