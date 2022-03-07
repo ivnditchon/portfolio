@@ -35,7 +35,7 @@
 </head>
 
 <body>
-    <div class="w-full h-max overflow-hidden scroll-smooth flex flex-col justify-center items-center">
+    <div class="w-full h-max relative overflow-hidden scroll-smooth flex flex-col justify-center items-center">
         <!-- Home and Topbar container-->
         <div class="w-full h-screen flex flex-col justify-center items-center dark:bg-darkMode-primary">
             <!-- Topbar -->
@@ -76,30 +76,31 @@
                     <img src="./images/moon.svg" alt="Moon" id="mobile_dark_mode_icon" class="h-5 w-5 cursor-pointer">
                 </button>
                 <!-- Navigation -->
-                <div id="menu_nav" role="navigation" class="w-2/5 h-screen px-2 py-2 flex flex-col absolute -right-full top-0 z-50 duration-500 ease-in-out bg-primary xl:landscape:w-full xl:flex xl:items-center xl:landscape:hidden">
+                <div id="menu_nav" role="navigation" class="w-2/5 h-screen px-2 py-2 flex flex-col absolute -right-full top-0 z-50 duration-500 ease-in-out bg-primary 
+                xl:landscape:static xl:landscape:h-max xl:landscape:flex-row xl:landscape:bg-transparent xl:landscape:w-full xl:flex xl:items-center xl:landscape:justify-end xl:landscape:py-0 xl:landscape:px-0 xl:landscape:transition-none">
                     <!-- Hide menu -->
-                    <button id="hide_menu_btn">
-                        <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6 text-white" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+                    <button id="hide_menu_btn" class="xl:landscape:hidden">
+                        <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6 text-white xs:h-7 xs:w-7" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
                             <path stroke-linecap="round" stroke-linejoin="round" d="M6 18L18 6M6 6l12 12" />
                         </svg>
                     </button>
-                    <ul class="flex-col items-start mt-5">
-                        <li class="mb-2.5 hover:animate-bounce group">
-                            <a href="#about" class="text-sm text-white font-medium tracking-wider uppercase antialiased group-hover:text-black group-hover:font-semibold dark:text-gray-200 dark:group-hover:text-white">about</a>
+                    <ul id="menu_nav_list" class="flex flex-col items-start mt-5 pointer-events-none xl:landscape:flex-row">
+                        <li class="mb-2.5 xs:mb-3 hover:animate-bounce group pointer-events-auto xl:landscape:mb-0">
+                            <a href="#about" class="text-sm text-white font-medium tracking-wider uppercase antialiased group-hover:text-black group-hover:font-semibold dark:text-gray-200 dark:group-hover:text-white xs:text-lg xl:landscape:text-sm xl:landscape:text-secondary">about</a>
                         </li>
-                        <li class="mb-2.5 xl:landscape:ml-5 hover:animate-bounce group">
-                            <a href="#skills" class="text-sm text-white font-medium tracking-wider uppercase antialiased group-hover:text-black group-hover:font-semibold dark:text-gray-200 dark:group-hover:text-white">skills</a>
+                        <li class="mb-2.5 xs:mb-3 xl:landscape:ml-5 hover:animate-bounce group pointer-events-auto xl:landscape:mb-0">
+                            <a href="#skills" class="text-sm text-white font-medium tracking-wider uppercase antialiased group-hover:text-black group-hover:font-semibold dark:text-gray-200 dark:group-hover:text-white xs:text-lg xl:landscape:text-sm xl:landscape:text-secondary">skills</a>
                         </li>
-                        <li class="mb-2.5 xl:landscape:ml-5 hover:animate-bounce group">
-                            <a href="#experience" class="text-sm text-white font-medium tracking-wider uppercase antialiased group-hover:text-black group-hover:font-semibold dark:text-gray-200 dark:group-hover:text-white">experience</a>
+                        <li class="mb-2.5 xs:mb-3 xl:landscape:ml-5 hover:animate-bounce group pointer-events-auto xl:landscape:mb-0">
+                            <a href="#experience" class="text-sm text-white font-medium tracking-wider uppercase antialiased group-hover:text-black group-hover:font-semibold dark:text-gray-200 dark:group-hover:text-white xs:text-lg xl:landscape:text-sm xl:landscape:text-secondary">experience</a>
                         </li>
-                        <li class="mb-2.5 xl:landscape:ml-5 hover:animate-bounce group">
-                            <a href="#projects" class="text-sm text-white font-medium tracking-wider uppercase antialiased group-hover:text-black group-hover:font-semibold dark:text-gray-200 dark:group-hover:text-white">project</a>
+                        <li class="mb-2.5 xs:mb-3 xl:landscape:ml-5 hover:animate-bounce group pointer-events-autoxl:landscape:mb-0">
+                            <a href="#projects" class="text-sm text-white font-medium tracking-wider uppercase antialiased group-hover:text-black group-hover:font-semibold dark:text-gray-200 dark:group-hover:text-white xs:text-lg xl:landscape:text-sm xl:landscape:text-secondary">project</a>
                         </li>
-                        <li class="xl:landscape:ml-5 hover:animate-bounce group">
-                            <a href="#contact" class="text-sm text-white font-medium tracking-wider uppercase antialiased group-hover:text-black group-hover:font-semibold dark:text-gray-200 dark:group-hover:text-white">contact</a>
+                        <li class="xl:landscape:ml-5 hover:animate-bounce group pointer-events-auto">
+                            <a href="#contact" class="text-sm text-white font-medium tracking-wider uppercase antialiased group-hover:text-black group-hover:font-semibold dark:text-gray-200 dark:group-hover:text-white xs:text-lg xl:landscape:text-sm xl:landscape:text-secondary">contact</a>
                         </li>
-                        <li class="hidden xl:flex ml-5">
+                        <li class="hidden xl:flex ml-5 pointer-events-auto">
                             <button id="nav_dark_mode_btn">
                                 <!-- Dark icon --> 
                                 <img src="./images/moon.svg" alt="Moon" id="nav_dark_mode_icon" class="h-5 w-5 cursor-pointer">
