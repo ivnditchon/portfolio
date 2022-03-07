@@ -8,6 +8,7 @@ const viewSkillsBtn = document.querySelector('#view_skills_btn');
 const hiddenSkills = document.querySelectorAll('#hidden_skill');
 const viewProjectsBtn = document.querySelector('#view_projects_btn');
 const hiddenProjects = document.querySelectorAll('#hidden_project');
+const scrollTopBtn = document.querySelector('#scroll_top_btn');
 
 // Darkmode toggle
 const darkModeToggle = () => {
@@ -99,6 +100,30 @@ const showAllProjects = () => {
     });
 }
 
+// Scroll to top 
+const scrollToTop = () => {
+    document.addEventListener('scroll', () => {
+        let scrolled = window.scrollY;
+
+        if (scrolled >= 345) {
+            if (scrollTopBtn.classList.contains('opacity-0')) {
+                scrollTopBtn.classList.remove('opacity-0');
+            }
+
+            scrollTopBtn.addEventListener('click', () => {
+                window.scrollTo({
+                    top: 0,
+                    behavior: 'smooth'
+                })
+            });
+        } else {
+            if (!scrollTopBtn.classList.contains('opacity-0')) {
+                scrollTopBtn.classList.add('opacity-0');
+            }
+        }
+    })
+}
+
 const main = () => {
     scroll();
     darkModeToggle();
@@ -108,6 +133,7 @@ const main = () => {
     });
     showAllSkills();
     showAllProjects();
+    scrollToTop();
 }
 
 main();
