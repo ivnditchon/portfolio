@@ -1,5 +1,10 @@
 // DOM Elements
 const html = document.querySelector('html');
+const body = document.querySelector('body');
+const menuBtn = document.querySelector('#menu_btn');
+const hideMenuBtn = document.querySelector('#hide_menu_btn');
+const menuNav = document.querySelector('#menu_nav');
+const menuOverlay = document.querySelector('#menu_overlay');
 const mobileDarkModeBtn = document.querySelector('#mobile_dark_mode_btn');
 const mobileDarkModeIcon = document.querySelector('#mobile_dark_mode_icon');
 const navDarkModeBtn = document.querySelector('#nav_dark_mode_btn');
@@ -41,6 +46,36 @@ const darkModeToggle = () => {
             navDarkModeIcon.src = './images/sun.svg';
         }
     });
+}
+
+// Show menu
+const showMenu = () => {
+    menuBtn.addEventListener('click', (e) => {
+        e.preventDefault();
+
+        if (menuNav.classList.contains('-right-full') && menuOverlay.classList.contains('-left-full') && !body.classList.contains('overflow-y-hidden')) {
+            menuNav.classList.remove('-right-full');
+            menuOverlay.classList.remove('-left-full');
+            menuNav.classList.add('right-0');
+            menuOverlay.classList.add('left-0');
+            body.classList.add('overflow-y-hidden');
+        }
+    });
+}
+
+// Hide menu
+const hideMenu = () => {
+    hideMenuBtn.addEventListener('click', (e) => {
+        e.preventDefault();
+
+        if (menuNav.classList.contains('right-0') && menuOverlay.classList.contains('left-0') && body.classList.contains('overflow-y-hidden')) {
+            menuNav.classList.remove('right-0');
+            menuOverlay.classList.remove('left-0');
+            menuNav.classList.add('-right-full');
+            menuOverlay.classList.add('-left-full');
+            body.classList.remove('overflow-y-hidden');
+        }
+    })
 }
 
 // Check mobile darkmode theme equals to dark in localstorage if existing
@@ -127,6 +162,8 @@ const scrollToTop = () => {
 const main = () => {
     scroll();
     darkModeToggle();
+    showMenu();
+    hideMenu();
     document.addEventListener('DOMContentLoaded', () => {
         mobileDarkMode();
         desktopDarkMode();
