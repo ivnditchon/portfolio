@@ -37,7 +37,7 @@
 <body>
     <div class="w-full h-max overflow-hidden scroll-smooth flex flex-col justify-center items-center">
         <!-- Home and Topbar container-->
-        <div class="w-full h-max relative flex flex-col justify-center items-center dark:bg-darkMode-primary">
+        <div class="w-full h-screen flex flex-col justify-center items-center dark:bg-darkMode-primary">
             <!-- Topbar -->
             <div id="top_bar" role="banner" class="w-full h-12 flex justify-between items-center md:landscape:border-b md:lanscape:border-gray-200 px-5 py-7 max-w-5xl xl:landscape:px-0 dark:border-gray-500">
                 <!-- Social media icons -->
@@ -75,25 +75,29 @@
                 <button id="mobile_dark_mode_btn" class="outline-none xl:landscape:hidden">
                     <img src="./images/moon.svg" alt="Moon" id="mobile_dark_mode_icon" class="h-5 w-5 cursor-pointer">
                 </button>
-
-                </button>
                 <!-- Navigation -->
-                <div role="navigation" class="hidden xl:flex xl:items-center">
-                    <ul class="w-full flex">
-                        <li class="hover:animate-bounce group">
-                            <a href="#about" class="text-sm text-secondary font-medium tracking-wider uppercase antialiased group-hover:text-black group-hover:font-semibold dark:text-gray-200 dark:group-hover:text-white">about</a>
+                <div id="menu_nav" role="navigation" class="w-2/5 h-screen px-2 py-2 flex flex-col absolute -right-full top-0 z-50 duration-500 ease-in-out bg-primary xl:landscape:w-full xl:flex xl:items-center xl:landscape:hidden">
+                    <!-- Hide menu -->
+                    <button id="hide_menu_btn">
+                        <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6 text-white" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+                            <path stroke-linecap="round" stroke-linejoin="round" d="M6 18L18 6M6 6l12 12" />
+                        </svg>
+                    </button>
+                    <ul class="flex-col items-start mt-5">
+                        <li class="mb-2.5 hover:animate-bounce group">
+                            <a href="#about" class="text-sm text-white font-medium tracking-wider uppercase antialiased group-hover:text-black group-hover:font-semibold dark:text-gray-200 dark:group-hover:text-white">about</a>
                         </li>
-                        <li class="ml-5 hover:animate-bounce group">
-                            <a href="#skills" class="text-sm text-secondary font-medium tracking-wider uppercase antialiased group-hover:text-black group-hover:font-semibold dark:text-gray-200 dark:group-hover:text-white">skills</a>
+                        <li class="mb-2.5 xl:landscape:ml-5 hover:animate-bounce group">
+                            <a href="#skills" class="text-sm text-white font-medium tracking-wider uppercase antialiased group-hover:text-black group-hover:font-semibold dark:text-gray-200 dark:group-hover:text-white">skills</a>
                         </li>
-                        <li class="ml-5 hover:animate-bounce group">
-                            <a href="#experience" class="text-sm text-secondary font-medium tracking-wider uppercase antialiased group-hover:text-black group-hover:font-semibold dark:text-gray-200 dark:group-hover:text-white">experience</a>
+                        <li class="mb-2.5 xl:landscape:ml-5 hover:animate-bounce group">
+                            <a href="#experience" class="text-sm text-white font-medium tracking-wider uppercase antialiased group-hover:text-black group-hover:font-semibold dark:text-gray-200 dark:group-hover:text-white">experience</a>
                         </li>
-                        <li class="ml-5 hover:animate-bounce group">
-                            <a href="#projects" class="text-sm text-secondary font-medium tracking-wider uppercase antialiased group-hover:text-black group-hover:font-semibold dark:text-gray-200 dark:group-hover:text-white">project</a>
+                        <li class="mb-2.5 xl:landscape:ml-5 hover:animate-bounce group">
+                            <a href="#projects" class="text-sm text-white font-medium tracking-wider uppercase antialiased group-hover:text-black group-hover:font-semibold dark:text-gray-200 dark:group-hover:text-white">project</a>
                         </li>
-                        <li class="ml-5 hover:animate-bounce group">
-                            <a href="#contact" class="text-sm text-secondary font-medium tracking-wider uppercase antialiased group-hover:text-black group-hover:font-semibold dark:text-gray-200 dark:group-hover:text-white">contact</a>
+                        <li class="xl:landscape:ml-5 hover:animate-bounce group">
+                            <a href="#contact" class="text-sm text-white font-medium tracking-wider uppercase antialiased group-hover:text-black group-hover:font-semibold dark:text-gray-200 dark:group-hover:text-white">contact</a>
                         </li>
                         <li class="hidden xl:flex ml-5">
                             <button id="nav_dark_mode_btn">
@@ -103,7 +107,8 @@
                         </li>
                     </ul>
                 </div>
-                <button class="xl:hidden">
+                <!-- Menu button -->
+                <button id="menu_btn" class="xl:hidden">
                     <svg id="topbar_menu_icon" xmlns="http://www.w3.org/2000/svg" class="h-6 w-6 md:h-7 md:w-8 text-gray-900 dark:text-gray-200" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                         <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16" />
                     </svg>
@@ -136,6 +141,8 @@
                     <img src="./images/hero.png" alt="Hero" class="h-52 object-contain landscape:h-48 xs:h-72 xs:landscape:h-72 md:h-96 md:landscape:h-96 xl:landscape:h-full">
                 </div>
             </div>
+            <!-- Overlay (if sidebar menu is active) -->
+            <div id="menu_overlay" class="absolute top-0 -left-full w-3/5 h-screen z-50 bg-black opacity-60 duration-500 ease-in-out"></div>
         </div>
         <!-- Sections container -->
         <div class="w-full h-max px-5 bg-gray-200 flex flex-col justify-center items-center dark:bg-darkMode-secondary">
