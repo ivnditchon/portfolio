@@ -109,23 +109,19 @@ const scrollToTop = () => {
             if (scrollTopBtn.classList.contains('opacity-0')) {
                 scrollTopBtn.classList.remove('opacity-0');
             }
-
-            scrollTopBtn.addEventListener('click', (e) => {
-                window.scrollTo({
-                    top: 0,
-                    behavior: 'smooth'
-                });
-
-                if (!e.currentTarget.classList.contains('opacity-0')) {
-                    e.currentTarget.classList.add('opacity-0');
-                }
-            });
         } else {
             if (!scrollTopBtn.classList.contains('opacity-0')) {
                 scrollTopBtn.classList.add('opacity-0');
             }
         }
     })
+
+    scrollTopBtn.addEventListener('click', (e) => {
+        window.scrollTo({
+            top: 0,
+            behavior: 'smooth'
+        });
+    });
 }
 
 const main = () => {
