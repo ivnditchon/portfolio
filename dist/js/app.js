@@ -150,7 +150,7 @@ const showAllProjects = () => {
 }
 
 // Scroll to top 
-const scrollToTop = () => {
+const scroll = () => {
     document.addEventListener('scroll', () => {
         let scrolled = window.scrollY;
 
@@ -164,7 +164,10 @@ const scrollToTop = () => {
             }
         }
     })
+}
 
+// Scroll to top 
+const scrollToTop = () => {
     scrollTopBtn.addEventListener('click', (e) => {
         window.scrollTo({
             top: 0,
@@ -174,7 +177,6 @@ const scrollToTop = () => {
 }
 
 const main = () => {
-    scroll();
     darkModeToggle();
     showMenu();
     hideMenu();
@@ -185,6 +187,7 @@ const main = () => {
     });
     showAllSkills();
     showAllProjects();
+    scroll();
     scrollToTop();
 }
 
