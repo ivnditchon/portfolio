@@ -2157,6 +2157,26 @@ Ensure the default browser behavior of the `hidden` attribute.
   }
 
   @media (orientation: landscape) {
+    .xl\:landscape\:hover\:bg-white:hover {
+      --tw-bg-opacity: 1;
+      background-color: rgb(255 255 255 / var(--tw-bg-opacity));
+    }
+  }
+
+  @media (orientation: landscape) {
+    .xl\:landscape\:hover\:opacity-90:hover {
+      opacity: 0.9;
+    }
+  }
+
+  @media (orientation: landscape) {
+    .group:hover .xl\:landscape\:group-hover\:text-primary {
+      --tw-text-opacity: 1;
+      color: rgb(31 33 123 / var(--tw-text-opacity));
+    }
+  }
+
+  @media (orientation: landscape) {
     .dark .xl\:landscape\:dark\:border-l {
       border-left-width: 1px;
     }
@@ -2179,6 +2199,27 @@ Ensure the default browser behavior of the `hidden` attribute.
     .dark .xl\:landscape\:dark\:border-r-gray-500 {
       --tw-border-opacity: 1;
       border-right-color: rgb(107 114 128 / var(--tw-border-opacity));
+    }
+  }
+
+  @media (orientation: landscape) {
+    .dark .dark\:xl\:landscape\:hover\:bg-darkMode-secondary:hover {
+      --tw-bg-opacity: 1;
+      background-color: rgb(3 3 3 / var(--tw-bg-opacity));
+    }
+  }
+
+  @media (orientation: landscape) {
+    .dark .dark\:xl\:landscape\:hover\:text-darkMode-text:hover {
+      --tw-text-opacity: 1;
+      color: rgb(87 93 245 / var(--tw-text-opacity));
+    }
+  }
+
+  @media (orientation: landscape) {
+    .dark .group:hover .dark\:xl\:landscape\:group-hover\:text-darkMode-text {
+      --tw-text-opacity: 1;
+      color: rgb(87 93 245 / var(--tw-text-opacity));
     }
   }
 }
